@@ -1,0 +1,49 @@
+.contentPadding {
+    padding: 1.5rem !important;
+  
+    @media #{$query-md-up} {
+      padding: 2rem !important;
+    }
+  }
+
+.contentMedia {
+    @include colSize(-1);
+    @include colOrder(0);
+}
+
+.contentRight {
+    composes: contentPadding;
+    @include colSize(1);
+    @include colOrder(1);
+    text-align: center;
+
+    @media #{$query-md-up} {
+        @include colSize(.5);
+        text-align: left;
+    }
+}
+
+.contentLeft {
+    composes: contentPadding;
+    @include colSize(1);
+    @include colOrder(1);
+    text-align: center;
+
+    @media #{$query-md-up} {
+        @include colSize(.5);
+        @include colOrder(-1);
+        text-align: left;
+    }
+}
+
+.contentTop {
+    composes: contentPadding;
+    @include colSize(1);
+    @include colOrder(-1);
+}
+
+.contentBottom {
+    composes: contentPadding;
+    @include colSize(1);
+    @include colOrder(1);
+}

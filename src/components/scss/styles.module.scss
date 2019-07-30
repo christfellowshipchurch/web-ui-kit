@@ -1,0 +1,12 @@
+/**
+* Modularized styling for the package
+*/
+
+@import './utilities/variables.scss';
+@import './utilities/grid.scss';
+
+@import './styles/media-item.scss';
+@import './styles/content.scss';
+@import './styles/loaders.scss';
+@import './styles/accordion.scss';
+@import './styles/carousel.scss';

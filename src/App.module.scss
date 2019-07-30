@@ -1,0 +1,110 @@
+/*  Bootstrap Overrides */
+$border-radius: 0;
+
+$cyan:                  #00aeef;
+$loader-gradient-end:   #f8f9fa;
+$loader-gradient-start: #ced4da;
+$dark-gray:             #adb5bd;
+
+$breakpoint-md:           768px;
+$query-md-up:             "screen and (min-width: #{$breakpoint-md})";
+
+$gutter-width:            1rem;
+$gutter-compensation:     ($gutter-width * 0.5) * -1;
+$half-gutter-width:       $gutter-width * 0.5;
+
+$media-aspect-ratios:     () !default;
+$media-aspect-ratios:     join(
+                            (
+                              (21 9), (16 9), (4 3), (1 1),
+                            ),
+                            $media-aspect-ratios
+                          );
+
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+}
+
+@mixin colBase {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
+
+@mixin colSize($size) {
+  @include colBase;
+
+  @if $size == -1 {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+  } @else {
+      flex-basis: percentage($number: ($size));
+      max-width: percentage($number: ($size));
+  }
+}
+
+@mixin colOrder($order) {
+  order: $order;
+}
+
+.flexCenter {
+  justify-content: center;
+  text-align: center;
+}
+
+.flexMiddle {
+  align-items: center;
+}
+
+.contentContainer {
+  composes: row;
+  composes: flexCenter;
+  composes: flexMiddle;
+}
+
+$cyan: #00aeef;
+
+.ringContainer {
+  height: 100%;
+  composes: contentContainer;
+}
+
+.ringLoader {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+
+  &:after {
+      content: " ";
+      display: block;
+      width: 46px;
+      height: 46px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 5px solid $cyan;
+      border-color: $cyan transparent $cyan transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+  }
+}
+
+/**
+* Animations for the Loaders
+*/
+
+@keyframes lds-dual-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
