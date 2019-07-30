@@ -9,8 +9,8 @@
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src/components -d ./lib --copy-files && yarn minify-css",
     "lint": "eslint ./src --ext .js",
     "babel-version": "babel --version",
-    "build-css": "node-sass --include-path scss ./src/components/scss/styles.module.scss ./src/components/css/styles.module.css",
-    "minify-css": "node-sass --include-path scss ./src/components/scss/styles.module.scss ./lib/css/styles.module.css --output-style compressed"
+    "build-css": "node-sass --include-path scss ./src/components/styles/scss/christ-fellowship-bootstrap.scss ./src/components/styles/css/christ-fellowship-bootstrap.css",
+    "minify-css": "node-sass --include-path scss ./src/components/styles/scss/christ-fellowship-bootstrap.scss ./lib/styles/css/christ-fellowship-bootstrap.css --output-style compressed"
   },
   "files": [
     "lib"
