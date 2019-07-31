@@ -1,7 +1,3 @@
-import Accordion from './Accordion'
-import Carousel from './Carousel'
-import Content from './Content'
-import Loader from './Loader'
-import Media from './Media'
+import Button from './Button'
 
-export { Accordion, Carousel, Content, Loader, Media }
+export { Button }
