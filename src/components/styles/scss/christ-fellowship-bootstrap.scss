@@ -4,3 +4,13 @@
 
 @import 'variables.scss';
 @import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+input[type=text],
+input[type=text]:focus {
+    border-width: 0;
+    outline: none;
+}
+
+label {
+    font-size: .8rem
+}

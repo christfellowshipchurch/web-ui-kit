@@ -1,3 +1,3 @@
 import Inputs from './Inputs'
 
-export { Inputs }
+export default Inputs
