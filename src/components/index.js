@@ -1,3 +1,3 @@
-import Inputs from './Inputs'
+import Inputs from './TextInput'
 
 export { Inputs }

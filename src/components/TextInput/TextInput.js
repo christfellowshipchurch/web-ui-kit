@@ -31,7 +31,7 @@ import { faExclamationCircle, faCheckCircle, faBan } from "@fortawesome/pro-ligh
     />
   )}
 
-const Inputs = ({ success, fail, label, helper, placeholder, disabled = false }) => {
+const TextInput = ({ success, fail, label, helper, placeholder, disabled = false }) => {
 
       const [isFocus, setIsFocus] = useState(false);    
       const [isHover, setIsHover] = useState(false);
@@ -106,4 +106,4 @@ const Inputs = ({ success, fail, label, helper, placeholder, disabled = false })
           </div>
     );
     }
-export default Inputs
+export default TextInput
