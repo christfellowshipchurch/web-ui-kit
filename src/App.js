@@ -1,6 +1,6 @@
 import React from 'react'
 import './components/styles/css/christ-fellowship-bootstrap.css'
-import { Inputs } from './components'
+import { TextInput } from './components'
 
 
 const App = () => {
@@ -13,19 +13,19 @@ const App = () => {
           <br/>
           <br/>
           <br/>
-          <Inputs success placeholder='Enter Text'/>
+          <TextInput success placeholder='Enter Text'/>
           <br/>
           <br/>
           <br/>
-          <Inputs fail placeholder='Enter Text'/>
+          <TextInput fail placeholder='Enter Text'/>
           <br/>
           <br/>
           <br/>
-          <Inputs disabled placeholder='Enter Text'/>
+          <TextInput disabled placeholder='Enter Text'/>
           <br/>
           <br/>
           <br/>
-          <Inputs output='' helper='this is helper text' label='this is a label' placeholder='Enter Text'/>
+          <TextInput output='' helper='this is helper text' label='this is a label' placeholder='Enter Text'/>
         </div>
       </div>
     </div>
