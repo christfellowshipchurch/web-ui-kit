@@ -7030,3 +7030,17 @@ input[type=text]:focus {
 
 label {
   font-size: .8rem; }
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none; }
+
+.dropdown,
+.dropdown-menu,
+.dropdown-item {
+  min-width: 325px;
+  max-width: 325px; }
+
+.dropdown-item:active {
+  color: rgba(0, 0, 0, 0); }

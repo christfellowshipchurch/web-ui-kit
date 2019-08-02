@@ -1,3 +1,4 @@
-import TextInputs from './TextInput'
+import TextInput from './TextInput'
+import Dropdown from './Dropdown'
 
-export { TextInputs }
+export { TextInput, Dropdown }

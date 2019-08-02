@@ -1,9 +1,21 @@
 import React from 'react'
 import './components/styles/css/christ-fellowship-bootstrap.css'
-import { TextInput } from './components'
+import { TextInput, Dropdown } from './components'
+
 
 
 const App = () => {
+
+  const items = [
+    {
+      call: 'item 1',
+      action: '#item1'
+    },
+    {
+      call: 'item 2',
+      action: '#item2'
+    }
+  ]
 
   return (
     <div className="container">
@@ -26,6 +38,10 @@ const App = () => {
           <br/>
           <br/>
           <TextInput output='' helper='this is helper text' label='this is a label' placeholder='Enter Text'/>
+          <br/>
+          <br/>
+          <br/>
+          <Dropdown title='Dropdown Title' items={items}/>
         </div>
       </div>
     </div>

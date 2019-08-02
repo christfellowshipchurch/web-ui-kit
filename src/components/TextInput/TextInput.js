@@ -53,7 +53,8 @@ const TextInput = ({ success, fail, label, helper, placeholder, disabled = false
     else if(disabled){
         icon = type.disable
         iconColor = colors.disable
-    }else{
+    }
+    else{
         icon = type.focus
         iconColor = isFocus ? colors.disable : 'rgba(0,0,0,0)'
     }

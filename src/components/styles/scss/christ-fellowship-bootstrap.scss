@@ -5,6 +5,15 @@
 @import 'variables.scss';
 @import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
 
+
+@mixin button-outline-variant {
+
+    &:not(:disabled):not(.disabled).active,
+    .show>&.dropdown-toggle {
+        background-color: transparent;
+    }
+}
+
 input[type=text],
 input[type=text]:focus {
     border-width: 0;
@@ -13,4 +22,21 @@ input[type=text]:focus {
 
 label {
     font-size: .8rem
+}
+
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.dropdown,
+.dropdown-menu,
+.dropdown-item {
+    min-width: 325px;
+    max-width: 325px;
+}
+
+.dropdown-item:active {
+    color: rgba(0, 0, 0, 0);
 }
