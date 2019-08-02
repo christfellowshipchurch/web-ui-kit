@@ -1,6 +1,6 @@
 import React from 'react'
 import './components/styles/css/christ-fellowship-bootstrap.css'
-import { TextInput, Dropdown } from './components'
+import { TextInput, Dropdown, TextArea } from './components'
 
 
 
@@ -41,7 +41,15 @@ const App = () => {
           <br/>
           <br/>
           <br/>
+          <div className='d-flex justify-content-center'>
           <Dropdown title='Dropdown Title' items={items}/>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <div className='d-flex justify-content-center'>
+             <TextArea placeholder='Type your message' helper='this is helper text' label='this is a label' fail/>
+          </div>
         </div>
       </div>
     </div>

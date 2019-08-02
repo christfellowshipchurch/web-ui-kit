@@ -7031,6 +7031,16 @@ input[type=text]:focus {
 label {
   font-size: .8rem; }
 
+textarea {
+  width: 325px;
+  height: 100px;
+  border-color: #ededed;
+  border-radius: .12rem;
+  resize: none; }
+  textarea:focus {
+    border-color: #aeaeaf;
+    outline: none; }
+
 .btn:focus,
 .btn:active {
   outline: none !important;
