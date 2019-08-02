@@ -9,15 +9,12 @@ import {
 } from "@fortawesome/pro-light-svg-icons";
 
 
-const Dropdown = ({ title, items, placeholder }) => {
-  // disabled = true
+const Dropdown = ({ title, items }) => {
 
   const [isHover, setisHover] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-
   let blueHover = isHover || isOpen ? "#00AEEF" : "#8d8d8e";
-
 
   let arrow = isOpen ? faAngleUp : faAngleDown;
 
