@@ -50,6 +50,27 @@ textarea {
     max-width: 325px;
 }
 
-.dropdown-item:active {
-    color: rgba(0, 0, 0, 0);
+.dropdown-item {
+    &:active {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    &:hover {
+        .checkbox {
+            color: #737374;
+        }
+    }
+}
+
+.disable {
+    color: #e2e2e2;
+    cursor: default;
+
+    &::placeholder {
+        color: #e2e2e2;
+    }
+}
+
+.checkbox {
+    color: transparent;
 }

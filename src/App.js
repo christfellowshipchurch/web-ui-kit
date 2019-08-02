@@ -14,6 +14,11 @@ const App = () => {
     {
       call: 'item 2',
       action: '#item2'
+    },
+    {
+      call: 'disabled',
+      action: '#disabled',
+      disable: true
     }
   ]
 
@@ -21,7 +26,7 @@ const App = () => {
     <div className="container">
       <div className="row">
         <div className="col text-center">
-          <h1 className="text-primary">Hello There!</h1>
+          <h1 className="text-primary">Components</h1>
           <br/>
           <br/>
           <br/>

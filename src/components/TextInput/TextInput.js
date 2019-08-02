@@ -41,6 +41,7 @@ const TextInput = ({ success, fail, label, helper, placeholder, disabled = false
 
     let icon
     let iconColor
+    let disableStyle = ''
 
     if(success){
         icon = type.success
@@ -53,6 +54,7 @@ const TextInput = ({ success, fail, label, helper, placeholder, disabled = false
     else if(disabled){
         icon = type.disable
         iconColor = colors.disable
+        disableStyle = 'disable'
     }
     else{
         icon = type.focus
@@ -78,6 +80,7 @@ const TextInput = ({ success, fail, label, helper, placeholder, disabled = false
                     disabled={disabled}
                   />
                   <input
+                    className={disableStyle}
                     type="text"
                     placeholder={placeholder}
                     onFocus={() => setIsFocus(!isFocus)}

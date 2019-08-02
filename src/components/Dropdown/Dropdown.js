@@ -12,18 +12,16 @@ import {
 const Dropdown = ({ title, items, placeholder }) => {
   // disabled = true
 
-  const [isButtonHover, setIsButtonHover] = useState(false);
+  const [isHover, setisHover] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
-  const [isHover, setIsHover] = useState(false)
 
 
-  let blueHover = isButtonHover || isOpen ? "#00AEEF" : "#8d8d8e";
+  let blueHover = isHover || isOpen ? "#00AEEF" : "#8d8d8e";
 
 
   let arrow = isOpen ? faAngleUp : faAngleDown;
 
-  const menuClass = `dropdown-menu dropdown-menu border-0 ${
+  const menuClass = `dropdown-menu py-0 dropdown-menu border-0 ${
     isOpen ? " show" : ""
   }`;
 
@@ -36,8 +34,8 @@ const Dropdown = ({ title, items, placeholder }) => {
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
-        onMouseEnter={() => setIsButtonHover(!isButtonHover)}
-        onMouseLeave={() => setIsButtonHover(!isButtonHover)}
+        onMouseEnter={() => setisHover(!isHover)}
+        onMouseLeave={() => setisHover(!isHover)}
         onClick={() => setIsOpen(!isOpen)}
       >
         <FontAwesomeIcon
@@ -60,28 +58,39 @@ const Dropdown = ({ title, items, placeholder }) => {
         {/* Item */}
 
         {items.map((n, i) => {
-
-          let hovering = isHover ? "#757575" : "rgba(0,0,0,0)";
-          let clicked = isClicked ? "#3ac27f" : hovering;
-
           return (
-            <div
+            n.disable
+            ? (
+              <div
               key={i}
-              className="d-flex align-items-center dropdown-item border-bottom text-muted pr-0"
+              className="d-flex align-items-center dropdown-item border-bottom pr-0"
               href={n.action}
-              onClick={() => setIsClicked(!isClicked)}
-              onMouseEnter={() => setIsHover(!isHover)}
-              onMouseLeave={() => setIsHover(!isHover)}
-              onChange={(e) => isClicked(e.target.clicked)}
             >
-              <p className="mb-0 pl-3">{n.call}</p>
+              <p 
+                className="mb-0 pl-3 disable"
+              >
+                {n.call}
+              </p>
               <FontAwesomeIcon
-                icon={faCheckCircle}
-                color={clicked}
+                icon={faBan}
+                color={'lightgrey'}
                 className="ml-auto p-1"
                 size="2x"
               />
             </div>
+            )
+            : (<div
+              key={i}
+              className="d-flex align-items-center dropdown-item border-bottom text-muted pr-0"
+              href={n.action}
+            >
+              <p className="mb-0 pl-3">{n.call}</p>
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="ml-auto p-1 checkbox"
+                size="2x"
+              />
+            </div>)
           );
         })}
       </div>
