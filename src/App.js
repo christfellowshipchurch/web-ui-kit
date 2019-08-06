@@ -14,7 +14,7 @@ const App = () => {
           <h1 className="text-primary">Buttons</h1>
           <br/>
           <br/>
-          <Button type='primary' size='lg' call='Large Primary'/>
+          <Button type='primary' size='lg' call='default'/>
           <br/>
           <br/>
           <br/>
@@ -26,7 +26,7 @@ const App = () => {
           <br/>
           <br/>
           <br/>
-          <Button type='primary' size='sm' call='Small Primary'/>
+          <Button type='primary' size='sm' call='default'/>
           <br/>
           <br/>
           <br/>

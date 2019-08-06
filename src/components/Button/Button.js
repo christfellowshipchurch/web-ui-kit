@@ -17,4 +17,4 @@ const Button = ({ size, type, call, action }) => {
     </button>
   );
 };
-export default Button;
+export default Button; 
