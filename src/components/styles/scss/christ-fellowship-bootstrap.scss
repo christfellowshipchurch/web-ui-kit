@@ -20,4 +20,75 @@
 .btn-sm {
     min-width: 125px;
     // padding: 0.5rem 1rem;
-}
+
+
+    @mixin button-outline-variant {
+
+        &:not(:disabled):not(.disabled).active,
+        .show>&.dropdown-toggle {
+            background-color: transparent;
+        }
+    }
+
+    input[type=text],
+    input[type=text]:focus {
+        border-width: 0;
+        outline: none;
+    }
+
+    label {
+        font-size: .8rem
+    }
+
+    textarea {
+        width: 325px;
+        height: 100px;
+        border-color: #ededed;
+        border-radius: .12rem;
+        resize: none;
+
+        &:focus {
+            border-color: #aeaeaf;
+            outline: none;
+        }
+    }
+
+    .btn:focus,
+    .btn:active {
+        outline: none !important;
+        box-shadow: none;
+    }
+
+    .dropdown,
+    .dropdown-menu,
+    .dropdown-item {
+        min-width: 325px;
+        max-width: 325px;
+    }
+
+    .dropdown-item {
+        &:active {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        &:hover {
+            .checkbox {
+                color: #737374;
+            }
+
+            cursor: pointer;
+        }
+    }
+
+    .disable {
+        color: #e2e2e2;
+        cursor: default;
+
+        &::placeholder {
+            color: #e2e2e2;
+        }
+    }
+
+    .checkbox {
+        color: transparent;
+    }
