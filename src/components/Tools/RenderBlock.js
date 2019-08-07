@@ -1,8 +1,7 @@
 import React from 'react';
 import { lowerCase } from 'lodash';
-import { Block, Media } from '..'
-import { Container, Row, Col } from 'reactstrap'
-import { getTextColorClass } from './Tools'
+import { Block, Media, Button } from '../../components'
+import { Tools } from '../../components'
 
 
 //--------------
@@ -11,12 +10,10 @@ import { getTextColorClass } from './Tools'
 //
 //***NOTE*** 
 //Need to add Buttons
-//------------------------
+//-------------------------
 
 
-
-export const renderBlock = (content) => {
-    console.log({content})
+export const renderBlock = ({content}) => {
 
     //Checks for # in hex value for background color
     let textColor = 'text-dark'
@@ -25,16 +22,16 @@ export const renderBlock = (content) => {
         containerStyles = {
             backgroundColor: content.backgroundColor
         }
-        textColor = getTextColorClass(content.backgroundColor)
+        textColor = Tools.getTextColorClass(content.backgroundColor)
     }
 
     const layout = lowerCase(content.contentLayout)
 
     if (layout === "background") {
         return (
-            <Container fluid>
-                <Row>
-                    <Col className={textColor}>
+            <div className='container-fluid'>
+                <div className='row'>
+                    <div className={`col`}>
                         <Media
                             imageUrl={content.coverImage ? content.coverImage.sources[0].uri : null}
                             imageAlt={content.imageAlt}
@@ -52,29 +49,37 @@ export const renderBlock = (content) => {
                                 {content.htmlContent}
                             </Block.Body>
 
-                            {/* {renderButtons(content.callsToAction)} */}
-                        </Media>
-                    </Col>
-                </Row>
+                            {content.callsToAction
+                                ? (
+                                    <Button call={content.callsToAction.call} action={content.callsToAction.call} />
+                                )
+                                : null
+                            }
+                            
 
-            </Container>
+                        </Media>
+                    </div>
+                </div>
+
+            </div>
         )
     } else {
         return (
-            <Container style={containerStyles} className="py-5" fluid>
-                <Container>
-                    <Row>
-                        <Col className={textColor}>
-                            {renderBlocktWithImgSizing(content)}
-                        </Col>
-                    </Row>
-                </Container>
-            </Container>
+            <div style={containerStyles} className="container-fluid py-5">
+                <div className='container'>
+                    <div className='row'>
+                        <div className={`col ${textColor}`}>
+                            {renderBlocktWithImgSizing({content})}
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
 
-const renderBlocktWithImgSizing = (content) => {
+const renderBlocktWithImgSizing = ({content}) => {
+
     const layout = lowerCase(content.contentLayout)
     const imageUrl = content.coverImage && layout !== 'original'
         ? content.coverImage.sources[0].uri
@@ -96,11 +101,15 @@ const renderBlocktWithImgSizing = (content) => {
             {layout === 'original'
                 ? (
                     <div className="w-100">
-                        <video playsInline autoPlay loop muted className="w-100">
-                            <source type="video/mp4" src={videoUrl} />
-                        </video>
+                        {content.videos
+                            ? (
+                                <video playsInline autoPlay loop muted className="w-100">
+                                    <source type="video/mp4" src={videoUrl} />
+                                </video>
+                            )
+                            : null}
 
-                        <img src={imageUrl} alt={content.imageAlt} className="w-100" />
+                       <img src={content.coverImage.sources[0].uri} alt={content.imageAlt} className="w-100"/>
                     </div>
                 )
                 : null}
@@ -113,19 +122,25 @@ const renderBlocktWithImgSizing = (content) => {
                 ratio={content.imageRatio}
             >
 
-                <Block.Subtitle className={`text-uppercase text-muted font-weight-bold ${textAlign}`}>
+                <Block.Subtitle className={`text-muted font-weight-bold ${textAlign}`}>
                     {content.subtitle}
                 </Block.Subtitle>
 
-                <Block.Title className={`text-uppercase titleWeight ${textAlign} ${header}`}>
+                <Block.Title className={`titleWeight ${textAlign} ${header}`}>
                     {content.title}
                 </Block.Title>
 
-                <Block.Body className={`pt-1 ${textAlign}`}>
+                <Block.Body className={`pt-1 pb-4 font-weight-light ${textAlign}`}>
                     {content.htmlContent}
                 </Block.Body>
 
-                {/* {renderButtons(content.callsToAction, content.buttonColor, content.title, content.openLinksInNewTab)} */}
+                {content.callsToAction
+                    ? (
+                        <Button call={content.callsToAction.call} action={content.callsToAction.call} />
+                    )
+                    : null
+                }
+
             </Block>
         </div>
     )

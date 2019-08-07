@@ -27,7 +27,7 @@ const BlockContainer = ({
     : imageUrl || videoUrl
       ? (
         <div className={contentMedia}>
-          <Media ratio={ratio} imageUrl={imageUrl} imageAlt={imageAlt} videoUrl={videoUrl} rounded={rounded} />
+          <Media ratio={ratio} imageUrl={imageUrl} imageAlt={imageAlt} videoUrl={videoUrl} rounded={rounded} className='rounded' />
         </div>
       )
       : null
