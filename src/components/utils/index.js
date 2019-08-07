@@ -1,5 +1,7 @@
 import React from 'react'
-import { renderBlock } from './RenderBlock'
+import renderBlockMethod from './renderBlock'
+
+export const renderBlock = renderBlockMethod
 
 //---------
 //Tools is a component that holds various utilities
@@ -7,7 +9,7 @@ import { renderBlock } from './RenderBlock'
 //--------------------------
 
 //Converts a hex value to an RGB value
-const hexToRGB = (hex) => {
+export const hexToRGB = (hex) => {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
     hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -23,7 +25,7 @@ const hexToRGB = (hex) => {
 }
 
 //Determines text color from background color
-const getTextColorClass = (backgroundColor) => {
+export const getTextColorClass = (backgroundColor) => {
     var rgb = hexToRGB(backgroundColor)
     var o = Math.round(((parseInt(rgb.r) * 299) +
         (parseInt(rgb.g) * 587) +
@@ -34,17 +36,3 @@ const getTextColorClass = (backgroundColor) => {
 
 //Maps edges to nodes
 export const mapEdgesToNodes = (data) => data.edges.map(n => n.node)
-
-
-
-
-
-
-const Tools = {
-    hexToRGB,
-    getTextColorClass,
-    mapEdgesToNodes,
-    renderBlock
-}
-
-export default Tools

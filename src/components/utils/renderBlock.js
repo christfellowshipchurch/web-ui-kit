@@ -1,7 +1,7 @@
 import React from 'react';
 import { lowerCase } from 'lodash';
-import { Block, Media, Button } from '../../components'
-import { Tools } from '../../components'
+import { Block, Media, Button } from '..'
+import {getTextColorClass} from '../utils'
 
 
 //--------------
@@ -13,7 +13,7 @@ import { Tools } from '../../components'
 //-------------------------
 
 
-export const renderBlock = ({content}) => {
+const renderBlock = ({content}) => {
 
     //Checks for # in hex value for background color
     let textColor = 'text-dark'
@@ -22,7 +22,7 @@ export const renderBlock = ({content}) => {
         containerStyles = {
             backgroundColor: content.backgroundColor
         }
-        textColor = Tools.getTextColorClass(content.backgroundColor)
+        textColor = getTextColorClass(content.backgroundColor)
     }
 
     const layout = lowerCase(content.contentLayout)
@@ -69,7 +69,7 @@ export const renderBlock = ({content}) => {
                 <div className='container'>
                     <div className='row'>
                         <div className={`col ${textColor}`}>
-                            {renderBlocktWithImgSizing({content})}
+                            {renderBlockWithImgSizing({content})}
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ export const renderBlock = ({content}) => {
     }
 }
 
-const renderBlocktWithImgSizing = ({content}) => {
+const renderBlockWithImgSizing = ({ content }) => {
 
     const layout = lowerCase(content.contentLayout)
     const imageUrl = content.coverImage && layout !== 'original'
@@ -145,3 +145,5 @@ const renderBlocktWithImgSizing = ({content}) => {
         </div>
     )
 }
+
+export default renderBlock
