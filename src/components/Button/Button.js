@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+
 
 const Button = ({ size, type, call, action }) => {
   
@@ -11,10 +12,19 @@ const Button = ({ size, type, call, action }) => {
   return (
     <button
       href={action}
-      className={`btn btn-${size} btn-${type} text-uppercase`}
+      className={`btn btn-${size} btn-${type} text-uppercase font-weight-bold`}
     >
       {call}
     </button>
-  );
-};
+  )
+}
+
+Button.defaultProps = {
+  size: 'lg',
+  type: 'primary',
+  call: 'default',
+  action:'action'
+}
+
+
 export default Button; 
