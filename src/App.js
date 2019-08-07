@@ -1,6 +1,6 @@
 import React from 'react'
 import './components/styles/css/christ-fellowship-bootstrap.css'
-import {Block, Button, Tools, Media, Row} from './components'
+import { Row } from './components'
 
 const multipleContent =[
   {
@@ -49,12 +49,9 @@ const content = {
 const App = () => {
 
   return (
-
          <div>
             <Row content={multipleContent} />
-            <Tools.renderBlock content={content} />
          </div>
-
           )
 }
 
