@@ -60,8 +60,9 @@ const Dropdown = ({ title, items }) => {
             ? (
               <div
               key={i}
-              className="d-flex align-items-center dropdown-item border-bottom pr-0"
+              className="d-flex align-items-center dropdown-item border-bottom pr-0 disable"
               href={n.action}
+              style={{cursor:'default'}}
             >
               <p 
                 className="mb-0 pl-3 disable"
