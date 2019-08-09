@@ -1,6 +1,6 @@
 import React from 'react'
 import './components/styles/css/christ-fellowship-bootstrap.css'
-import { Row, TextInput, Dropdown, TextArea, Carousel } from './components'
+import { Row, TextInput, Dropdown, TextArea, Carousel, Accordion, Button } from './components'
 
 const multipleContent =[
   {
@@ -77,7 +77,7 @@ const carouselChild = [
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-light'>
     <Row content={multipleContent} />
     <div className="container">
       <div className="row">
@@ -118,6 +118,23 @@ const App = () => {
           <br/>
           <br/>
           <Carousel children={carouselChild} />
+          <br/>
+          <br/>
+          <br/>
+            <Accordion 
+              blockTitle='Block Title' 
+              blockBody='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.'
+              link = {{call:'Text Link', action: '#action'}}
+            >
+              <div title="Dropwdown Item 1">
+                  <h2>This is one item that I want displayed</h2>
+              </div>
+
+                <h2 title="Dropwdown Item 2">Since the Accordion parses each child, there is no need to adhere to a specific structure for the children</h2>
+
+                <Button title='this is a button' />
+
+            </Accordion>
           <br/>
           <br/>
           <br/>

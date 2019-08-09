@@ -90,6 +90,7 @@ const TextInput = ({ success, fail, label, helper, placeholder, disabled = false
                     disabled={disabled}
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
+                    style={{backgroundColor:'rgba(0,0,0,0)'}}
                   />
                   <FontAwesomeIcon
                     icon={ icon }

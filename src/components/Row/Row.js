@@ -13,7 +13,8 @@ const Row = ({ content }) => {
         col: classnames(
             'col-12',
             'col-md-6',
-            'p-0'
+            'p-0',
+            'd-flex align-self-stretch'
         )
     }
 
