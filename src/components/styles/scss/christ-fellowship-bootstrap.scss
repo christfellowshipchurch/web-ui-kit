@@ -92,3 +92,28 @@ textarea {
 .checkbox {
     color: transparent;
 }
+
+//Carousel Styles
+.carousel-indicators>li {
+    width: 0.9em;
+    height: 0.9rem;
+    margin: 0rem 0.3rem;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 500px;
+}
+
+.img-circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    align-self: center;
+}
+
+.carousel-item.active {
+    transition: all 300ms 300ms;
+}

@@ -7,6 +7,7 @@ import Accordion from './Accordion'
 import TextInput from './TextInput'
 import Dropdown from './Dropdown'
 import TextArea from './TextArea'
+import Carousel from './Carousel'
 
 
-export { Loader, Media, Block, Row, Button, Accordion, TextInput, Dropdown, TextArea }
+export { Loader, Media, Block, Row, Button, Accordion, TextInput, Dropdown, TextArea, Carousel }
