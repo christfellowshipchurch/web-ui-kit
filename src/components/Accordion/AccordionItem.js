@@ -6,19 +6,25 @@ import {
   accordionTitle, accordionIcon, accordionBody, accordionButton,
   contentPadding,
 } from '../styles/scss/styles.module.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleUp,
+  faAngleDown
+} from "@fortawesome/pro-light-svg-icons";
 
 const AccordionItem = ({ id, title, isOpen, onClick, children }) => {
 
   return (
     <div className={classnames(accordionItem, isOpen ? accordionItemOpen : '')} status={isOpen ? 'open' : 'closed'}>
-      <button className={accordionButton} onClick={() => onClick(id)}>
+      <button className={`d-flex align-items-center ${accordionButton}`} onClick={() => onClick(id)}>
         <div className={accordionTitle}>
           {title}
         </div>
-        <div className={accordionIcon}>
-          <span></span>
-          <span></span>
-        </div>
+        <FontAwesomeIcon
+        icon={isOpen ? faAngleUp : faAngleDown}
+        size='2x'
+        className='ml-auto'
+        />
       </button>
 
       <div className={accordionBody}>

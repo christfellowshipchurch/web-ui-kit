@@ -13,14 +13,14 @@
 }
 
 .accordionButton {
-    font-weight: normal;
-    padding: 1.5rem 2rem;
+    font-weight: bold;
+    padding: 1rem 1.3rem;
     background: white;
-    border-color: $dark-gray;
-    border-width: 0 0 2px 0;
     width: 100%;
     text-align: left;
     font-size: larger;
+    border-radius: 0.5rem;
+    border: none;
 
     transition: font-weight .25s ease-out;
     -webkit-tap-highlight-color: transparent;
@@ -36,20 +36,13 @@
 
 .accordionBody {
     background: white;
-    border: solid;
-    border-color: $dark-gray;
-    border-width: 0 0 1px 0;
+    border: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height .25s ease-out;
 }
 
 .accordionItemOpen {
-    .accordionButton {
-        font-weight: bold;
-        transition: font-weight .25s ease;
-    }
-
     .accordionBody {
         max-height: 100vh;
         display: block;
@@ -58,7 +51,9 @@
     }
 
     & .accordionIcon {
-        &:before{ transform: rotate(90deg); }
+        &:before {
+            transform: rotate(90deg);
+        }
     }
 }
 

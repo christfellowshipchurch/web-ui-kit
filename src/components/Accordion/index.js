@@ -1,3 +1,3 @@
-import Wrapper from './Accordion'
+import Accordion from './Accordion'
 
-export default Wrapper
+export default Accordion
