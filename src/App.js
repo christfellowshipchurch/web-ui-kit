@@ -85,7 +85,7 @@ const App = () => {
           <br/>
           <br/>
           <br/>
-          <h1 className="text-primary">Inputs</h1>
+          <h1 className="text-primary">Stuff</h1>
           <br/>
           <br/>
           <br/>
