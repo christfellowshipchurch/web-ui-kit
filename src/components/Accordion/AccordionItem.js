@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classnames from 'classnames'
 import PropTypes from 'prop-types';
 import {
   accordionItem, accordionItemOpen,
-  accordionTitle, accordionIcon, accordionBody, accordionButton,
+  accordionTitle, accordionBody, accordionButton,
   contentPadding,
 } from '../styles/scss/styles.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,9 +21,9 @@ const AccordionItem = ({ id, title, isOpen, onClick, children }) => {
           {title}
         </div>
         <FontAwesomeIcon
-        icon={isOpen ? faAngleUp : faAngleDown}
-        size='2x'
-        className='ml-auto'
+          icon={isOpen ? faAngleUp : faAngleDown}
+          size='2x'
+          className='ml-auto'
         />
       </button>
 

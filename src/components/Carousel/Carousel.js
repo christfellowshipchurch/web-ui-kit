@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
 
 
-
-
 const Carousel = ({ children }) => {
     const [index, setIndex] = useState(0)
     const length = children.length
@@ -55,7 +53,7 @@ const Carousel = ({ children }) => {
                             )
                             return (
                                 <div class={itemClasses}>
-                                    <div className="d-flex justify-content-center p-5"><img className='img-circle' src={child.imageUrl} alt=""/></div>
+                                    <div className="d-flex justify-content-center"><img className='img-circle' src={child.imageUrl} alt=""/></div>
                                     <p className="p-5">{child.text}</p>
                                 </div>
                             )

@@ -18,7 +18,7 @@ const ACCORDION_TYPES = {
   Persistent: 'persistent',
 };
 
-const Accordion = ({ blockTitle, blockBody, type, children, link }) => {
+const Accordion = ({ blockTitle, blockBody, type, children, textLink }) => {
   const [sections, setSections] = useState([])
 
   const toggle = (id) => {
@@ -54,7 +54,7 @@ const Accordion = ({ blockTitle, blockBody, type, children, link }) => {
     <div className={accordionContainer}>
       <div className='d-flex flex-column p-2'>
           <h2 className='font-weight-bold'>{blockTitle}</h2>
-          <p>{blockBody}</p>
+          <p className='font-weight-light'>{blockBody}</p>
       </div>
       {children.map((child, i) => {
         let itemId = `section-${i}`
@@ -72,14 +72,14 @@ const Accordion = ({ blockTitle, blockBody, type, children, link }) => {
         );
       })}
 
-      {link &&
+      {textLink &&
       <div className='col-12 py-4'>
         <a 
-          href={link.action} 
+          href={textLink.action} 
           className='text-muted font-weight-bold'
           style={{textDecoration: 'none'}}
         >
-          {link.call}
+          {textLink.call}
         </a>
       </div>
       }

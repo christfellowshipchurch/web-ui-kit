@@ -124,7 +124,7 @@ const App = () => {
             <Accordion 
               blockTitle='Block Title' 
               blockBody='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.'
-              link = {{call:'Text Link', action: '#action'}}
+              textLink = {{call:'Text Link', action: '#action'}}
             >
               <div title="Dropwdown Item 1">
                   <h2>This is one item that I want displayed</h2>
