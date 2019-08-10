@@ -44,7 +44,7 @@ const Carousel = ({ children }) => {
                 {/* <!-- Wrapper for carousel items --> */}
                 
                 {length &&
-                    <div className="carousel-inner d-flex align-items-center">
+                    <div className="carousel-inner container d-flex align-items-center">
                         {children.map((child, i) => {
                             const itemClasses = classnames(
                                 'item',
@@ -54,7 +54,7 @@ const Carousel = ({ children }) => {
                             return (
                                 <div class={itemClasses}>
                                     <div className="d-flex justify-content-center"><img className='img-circle' src={child.imageUrl} alt=""/></div>
-                                    <p className="p-5">{child.text}</p>
+                                    <p className="p-5 text-center">{child.text}</p>
                                 </div>
                             )
                         })}

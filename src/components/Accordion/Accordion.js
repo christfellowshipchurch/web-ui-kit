@@ -51,10 +51,10 @@ const Accordion = ({ blockTitle, blockBody, type, children, textLink }) => {
   }
 
   return (
-    <div className={accordionContainer}>
+    <div className={`container ${accordionContainer}`}>
       <div className='d-flex flex-column p-2'>
-          <h2 className='font-weight-bold'>{blockTitle}</h2>
-          <p className='font-weight-light'>{blockBody}</p>
+          <h2 className='font-weight-bold text-center'>{blockTitle}</h2>
+          <p className='font-weight-light text-center'>{blockBody}</p>
       </div>
       {children.map((child, i) => {
         let itemId = `section-${i}`
@@ -73,7 +73,7 @@ const Accordion = ({ blockTitle, blockBody, type, children, textLink }) => {
       })}
 
       {textLink &&
-      <div className='col-12 py-4'>
+      <div className='col-12 py-4 d-flex justify-content-center'>
         <a 
           href={textLink.action} 
           className='text-muted font-weight-bold'

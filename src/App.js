@@ -79,13 +79,10 @@ const App = () => {
   return (
     <div className='bg-light'>
     <Row content={multipleContent} />
-    <div className="container">
-      <div className="row">
-        <div className="col text-center">
           <br/>
           <br/>
           <br/>
-          <h1 className="text-primary">Stuff</h1>
+          <h1 className="text-primary text-center">Stuff</h1>
           <br/>
           <br/>
           <br/>
@@ -139,9 +136,6 @@ const App = () => {
           <br/>
           <br/>
         </div>
-      </div>
-    </div>
-    </div>
   )
 }
 
