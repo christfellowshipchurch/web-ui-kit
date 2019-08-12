@@ -1,5 +1,5 @@
 {
-  "name": "@christfellowshipchurch/flat-ui-web",
+  "name": "@christfellowshipchurch/web-ui-kit",
   "version": "1.0.8",
   "description": "Flat UI package for Christ Fellowship web projects",
   "main": "lib/index.js",
@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christfellowshipchurch/flat-ui-web.git"
+    "url": "git+https://github.com/christfellowshipchurch/web-ui-kit.git"
   },
   "author": "Christ Fellowship Church <developer@cftoday.org>",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/christfellowshipchurch/flat-ui-web/issues"
+    "url": "https://github.com/christfellowshipchurch/web-ui-kit/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -82,7 +82,7 @@
     ],
     "testEnvironment": "jsdom"
   },
-  "homepage": "https://github.com/christfellowshipchurch/flat-ui-web#readme",
+  "homepage": "https://github.com/christfellowshipchurch/web-ui-kit#readme",
   "publishConfig": {
     "access": "public"
   },
