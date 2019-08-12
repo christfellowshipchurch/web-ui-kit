@@ -4,3 +4,116 @@
 
 @import 'variables.scss';
 @import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// @each $color,
+// $value in $theme-colors {
+//     .btn-outline-#{$color} {
+//         @include button-outline-variant($value, color-yiq($color), transparent, $value);
+//     }
+// }
+
+.btn-lg {
+    min-width: 250px;
+    // padding: 1rem 1.5rem;
+}
+
+.btn-sm {
+    min-width: 125px;
+    // padding: 0.5rem 1rem;
+}
+
+@mixin button-outline-variant {
+
+    &:not(:disabled):not(.disabled).active,
+    .show>&.dropdown-toggle {
+        background-color: transparent;
+    }
+}
+
+input[type=text],
+input[type=text]:focus {
+    border-width: 0;
+    outline: none;
+}
+
+label {
+    font-size: .8rem
+}
+
+textarea {
+    width: 325px;
+    height: 100px;
+    border-color: #ededed;
+    border-radius: .12rem;
+    resize: none;
+
+    &:focus {
+        border-color: #aeaeaf;
+        outline: none;
+    }
+}
+
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.dropdown,
+.dropdown-menu,
+.dropdown-item {
+    min-width: 325px;
+    max-width: 325px;
+}
+
+.dropdown-item {
+    &:active {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    &:hover {
+        .checkbox {
+            color: #737374;
+        }
+
+        cursor: pointer;
+    }
+}
+
+.disable {
+    color: #e2e2e2;
+    cursor: default;
+
+    &::placeholder {
+        color: #e2e2e2;
+    }
+}
+
+.checkbox {
+    color: transparent;
+}
+
+//Carousel Styles
+.carousel-indicators>li {
+    width: 0.9em;
+    height: 0.9rem;
+    margin: 0rem 0.3rem;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 500px;
+}
+
+.img-circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    align-self: center;
+}
+
+.carousel-item.active {
+    transition: all 300ms 300ms;
+}

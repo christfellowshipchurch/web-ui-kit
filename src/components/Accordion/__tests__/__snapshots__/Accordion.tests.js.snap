@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion renders an accordion with items inside 1`] = `
+<div>
+  <div
+    className=""
+    status="closed"
+  >
+    <button
+      onClick={[Function]}
+    >
+      <div>
+        Item 1
+      </div>
+      <div>
+        <span />
+        <span />
+      </div>
+    </button>
+    <div>
+      <div>
+        <div
+          title="Item 1"
+        >
+          This is item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+    status="closed"
+  >
+    <button
+      onClick={[Function]}
+    >
+      <div>
+        Item 2
+      </div>
+      <div>
+        <span />
+        <span />
+      </div>
+    </button>
+    <div>
+      <div>
+        <div
+          title="Item 2"
+        >
+          This is item 2
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+    status="closed"
+  >
+    <button
+      onClick={[Function]}
+    >
+      <div>
+        Item 3
+      </div>
+      <div>
+        <span />
+        <span />
+      </div>
+    </button>
+    <div>
+      <div>
+        <div
+          title="Item 3"
+        >
+          This is item 3
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
