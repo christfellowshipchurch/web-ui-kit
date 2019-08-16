@@ -1,40 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-import Image from './Image';
-import Video from './Video';
-
-import {
-  mediaContainer1by1, mediaContainer4by3, mediaContainer16by9, mediaContainer21by9,
-  mediaContentContainer, round
-} from '../styles/scss/styles.module.scss'
+import Image from './Image'
+import Video from './Video'
 
 const MediaItem = ({
   ratio, imageUrl, imageAlt, videoUrl, className, children, rounded
 }) => {
-  const ratioClasses = {
-    '1by1': mediaContainer1by1,
-    '4by3': mediaContainer4by3,
-    '16by9': mediaContainer16by9,
-    '21by9': mediaContainer21by9,
-  }
-
-  const classes = classNames(
-    ratioClasses[ratio],
-    rounded ? round : '',
-    className
-  )
 
   return (
-    <div className={classes}>
-      <Image source={imageUrl} alt={imageAlt} />
+    <div className={`embed-responsive embed-responsive-${ratio}`}>
+      <Image source={imageUrl} alt={imageAlt} className='embed-responsive-item' />
       {videoUrl
-        ? <Video source={videoUrl} />
+        ? <Video source={videoUrl} className='embed-responsive-item' />
         : null}
 
       {children
-        ? <div className={mediaContentContainer}>{children}</div>
+        ? <div className='fill d-flex justify-content-center align-items-center'>{children}</div>
         : null}
     </div>
   )
@@ -47,7 +30,7 @@ const defaultProps = {
 }
 
 const propTypes = {
-  ratio: PropTypes.string,
+  ratio: PropTypes.oneOf(['1by1', '4by3', '16by9', '21by9']),
   imageUrl: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   videoUrl: PropTypes.string,

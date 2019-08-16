@@ -1,10 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
-import { renderBlock } from '../utils'
 
-
-const Row = ({ content }) => {
-    const lastBlock = content[content.length - 1]
+const Row = ({ children }) => {
     const classes = {
         row: classnames(
             'row',
@@ -17,49 +14,27 @@ const Row = ({ content }) => {
             'd-flex align-self-stretch'
         )
     }
-    if(content.length === 1) {
-        return (
-            <div className={classes.row}>          
-            {content.map((child, i) => {             
-            return (
-                    <div className='col-12 p-0'>                   
-                        {renderBlock({ content: child })}
-                    </div>
-                    )
-            })}                
-            </div>
-            )    
-    }
-    else if(content.length % 2 === 0) {
-        return (
-            <div className={classes.row}>          
-            {content.map((child, i) => {             
-            return (
-                    <div className={classes.col}>                   
-                        {renderBlock({ content: child })}
-                    </div>
-                    )
-            })}                
-            </div>
-            )    
-    } else {   
-        return (
+
+    return children.length
+        ? (
             <div className={classes.row}>
-                {content.map((child) => { 
-                    content.pop()            
-                    return (
-                        <div className={classes.col}> 
-                            {renderBlock({ content: child })}
-                        </div>
+                {children.map((n, i) => {
+                    const classes = classnames(
+                        'd-flex',
+                        'align-items-center',
+                        'justify-content-center',
+                        'p-0',
+                        'col-12',
+                        i === children.length - 1
+                            ? 'col-md'
+                            : 'col-md-6'
                     )
+                    return <div className={classes} key={i}>{n}</div>
                 })}
-                <div className='col-12 p-0'>                   
-                    {renderBlock({ content: lastBlock })}
-                </div>                
             </div>
-            )  
-    }
+        )
+        : <div className="col-12">{children}</div>
 }
-     
+
 
 export default Row

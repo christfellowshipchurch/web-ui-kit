@@ -1,20 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { mediaItem } from '../styles/scss/styles.module.scss'
-
-const MediaVideo = ({ source }) => (
-  <video playsInline autoPlay loop muted className={mediaItem}>
+const MediaVideo = ({ source, className }) => (
+  <video playsInline autoPlay loop muted className={className}>
     <source type="video/mp4" src={source} />
   </video>
-);
+)
 
 const defaultProps = {}
 const propTypes = {
   source: PropTypes.string.isRequired,
 }
 
-MediaVideo.defaultProps = defaultProps;
-MediaVideo.propTypes = propTypes;
+MediaVideo.defaultProps = defaultProps
+MediaVideo.propTypes = propTypes
 
-export default MediaVideo;
+export default MediaVideo

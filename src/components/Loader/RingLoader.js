@@ -1,9 +1,12 @@
 import React from 'react'
-import {
-    ringContainer, ringLoader
-} from '../styles/scss/styles.module.scss'
 
-const RingLoader = () => <div className={ringContainer}><div className={ringLoader}></div></div>
+const RingLoader = () => (
+    <div className="fill d-flex justify-content-center align-items-center">
+        <div className="spinner-border text-primary" role="status">
+            <span className="sr-only">Loading...</span>
+        </div>
+    </div>
+)
 
 const propTypes = {}
 const defaultProps = {}

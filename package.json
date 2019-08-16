@@ -1,6 +1,6 @@
 {
   "name": "@christfellowshipchurch/web-ui-kit",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "description": "Flat UI package for Christ Fellowship web projects",
   "main": "lib/index.js",
   "scripts": {
@@ -61,7 +61,7 @@
     "classnames": "^2.2.6",
     "html-to-react": "^1.3.4",
     "lodash": "^4.17.11",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "popper.js": "^1.14.7",
     "prop-types": "^15.7.2",
     "react-image": "^2.0.0",
