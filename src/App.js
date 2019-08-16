@@ -76,6 +76,9 @@ const carouselChild = [
   }
 ]
 
+const title='this is a title'
+const body='tis is body aslkdjfbsakdjlf'
+
 const App = () => {
   return (
     <div className='bg-light'>
@@ -115,25 +118,26 @@ const App = () => {
           <br/>
           <br/>
           <br/>
-          <Carousel children={multipleContent} />
+          <Carousel children={content} />
           <br/>
           <br/>
           <br/>
             <Accordion 
-              blockTitle='Block Title' 
-              blockBody='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.'
+              blockTitle={title}
+              blockBody={body}
+              // blockBody='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.'
               textLink = {{call:'Text Link', action: '#action'}}
             >
-              <div title="Dropwdown Item 1">
-                  <h2>This is one item that I want displayed</h2>
-              </div>
-
-                <h2 title="Dropwdown Item 2">Since the Accordion parses each child, there is no need to adhere to a specific structure for the children</h2>
-
-                <Button title='this is a button' />
-
+              {multipleContent.map((accordionItem, j) => {
+                        return (
+                          <div key={j} title={accordionItem.title}>
+                            <h2>{accordionItem.title}</h2>
+                            {accordionItem.htmlContent}
+                          </div>
+                        )
+                    }
+                  )}
             </Accordion>
-          <br/>
           <br/>
           <br/>
         </div>

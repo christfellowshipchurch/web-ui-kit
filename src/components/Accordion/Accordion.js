@@ -51,26 +51,29 @@ const Accordion = ({ blockTitle, blockBody, type, children, textLink }) => {
   }
 
   return (
-    <div className={`container ${accordionContainer}`}>
-      <div className='d-flex flex-column p-2'>
+    <div className={`container d-flex justify-content-center ${accordionContainer}`}>
+      <div className='row d-flex flex-column p-2'>
           <h2 className='font-weight-bold text-center'>{blockTitle}</h2>
           <p className='font-weight-light text-center'>{blockBody}</p>
       </div>
-      {children.map((child, i) => {
-        let itemId = `section-${i}`
+      <div className='row'>
+        {children.map((child, i) => {
+          let itemId = `section-${i}`
 
-        return (          
-          <AccordionItem
-            id={itemId}
-            title={child.props.title}
-            isOpen={sections.includes(itemId)}
-            onClick={toggle}
-            key={i}
-          >
-            {child}
-          </AccordionItem>
-        );
-      })}
+          return (          
+            <AccordionItem
+              id={itemId}
+              title={child.props.title}
+              isOpen={sections.includes(itemId)}
+              onClick={toggle}
+              key={i}
+            >
+              {child}
+            </AccordionItem>
+          );
+        })}
+      </div>
+      
 
       {textLink &&
       <div className='col-12 py-4 d-flex justify-content-center'>
