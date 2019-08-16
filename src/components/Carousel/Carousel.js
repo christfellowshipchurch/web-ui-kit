@@ -53,8 +53,8 @@ const Carousel = ({ children }) => {
                             )
                             return (
                                 <div class={itemClasses}>
-                                    <div className="d-flex justify-content-center"><img className='img-circle' src={child.imageUrl} alt=""/></div>
-                                    <p className="p-5 text-center">{child.text}</p>
+                                    <div className="d-flex justify-content-center"><img className='img-circle' src={child.coverImage ? child.coverImage.sources[0].uri : null} alt=""/></div>
+                                    <p className="p-5 text-center">{child.htmlContent}</p>
                                 </div>
                             )
                         })}

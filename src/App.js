@@ -34,16 +34,17 @@ const multipleContent =[
     htmlContent: 'Discover more about our pastors, beliefs, and history'
   }
 ]
-const content = {
+
+const content = [{
   backgroundColor: '#353535',
-  contentLayout: 'default',
+  contentLayout: 'right',
   callsToAction: {call: 'learn more', action: '#action'},
   coverImage: {sources: {0:{uri: 'https://rock.christfellowshipconference.com/GetImage.ashx?guid=2550f1e3-271d-4156-96ff-cfcac1345731'}}},
   imageRatio: '16by9',
   htmlContent: 'Discover more about our pastors, beliefs, and history',
   subtitle: 'Subtitle',
   title: 'Want to learn more about Christ Fellowship?'
-}
+}]
 const items = [
   {
     call: 'item 1',
@@ -78,7 +79,7 @@ const carouselChild = [
 const App = () => {
   return (
     <div className='bg-light'>
-    <Row content={multipleContent} />
+    <Row content={content} />
           <br/>
           <br/>
           <br/>
@@ -114,7 +115,7 @@ const App = () => {
           <br/>
           <br/>
           <br/>
-          <Carousel children={carouselChild} />
+          <Carousel children={multipleContent} />
           <br/>
           <br/>
           <br/>

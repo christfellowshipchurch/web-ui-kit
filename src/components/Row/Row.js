@@ -17,8 +17,20 @@ const Row = ({ content }) => {
             'd-flex align-self-stretch'
         )
     }
-
-    if(content.length % 2 === 0) {
+    if(content.length === 1) {
+        return (
+            <div className={classes.row}>          
+            {content.map((child, i) => {             
+            return (
+                    <div className='col-12 p-0'>                   
+                        {renderBlock({ content: child })}
+                    </div>
+                    )
+            })}                
+            </div>
+            )    
+    }
+    else if(content.length % 2 === 0) {
         return (
             <div className={classes.row}>          
             {content.map((child, i) => {             
