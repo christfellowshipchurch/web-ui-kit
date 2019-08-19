@@ -12,6 +12,7 @@ const BlockContainer = ({
   layout, imageUrl, imageAlt, videoUrl, ratio, children, className, rounded, media
 }) => {
   layout = lowerCase(layout)
+  const centerContentVH = 'd-flex justify-content-center align-items-center'
   const mediaColSize = includes(MEDIA_COL_12, layout) ? 'col-md-12' : 'col-md-6'
   const mediaColOrder = layout === 'inverted'
     ? 'order-last'
@@ -41,10 +42,10 @@ const BlockContainer = ({
   return (
     <div className={`container-fluid ${className}`}>
       <div className="row">
-        <div className={`col-12 ${mediaColSize} ${mediaColOrder}`}>
+        <div className={`col-12 ${mediaColSize} ${mediaColOrder} ${centerContentVH}`}>
           {mediaItem}
         </div>
-        <div className={`col-12 col-md ${textAlignment}`}>
+        <div className={`col-12 col-md ${textAlignment} ${centerContentVH}`}>
           {children}
         </div>
       </div>
