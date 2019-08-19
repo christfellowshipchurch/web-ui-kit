@@ -38,7 +38,9 @@ const App = () => {
             {[0, 1, 2, 3, 4, 5, 6].map(n => <p>{n}</p>)}
           </Block.Body>
         </Block>
+      </Row>
 
+      <Row>
         <Block
           layout={'inverted'}
           imageUrl={'https://picsum.photos/id/652/200/300'}
@@ -58,7 +60,9 @@ const App = () => {
             {[0, 1, 2, 3, 4, 5, 6].map(n => <p>{n}</p>)}
           </Block.Body>
         </Block>
+      </Row>
 
+      <Row>
         <Block
           layout={'left'}
           imageUrl={'https://picsum.photos/id/652/200/300'}
@@ -78,7 +82,9 @@ const App = () => {
             {[0, 1, 2, 3, 4, 5, 6].map(n => <p>{n}</p>)}
           </Block.Body>
         </Block>
+      </Row>
 
+      <Row>
         <Block
           layout={'right'}
           imageUrl={'https://picsum.photos/id/652/200/300'}
