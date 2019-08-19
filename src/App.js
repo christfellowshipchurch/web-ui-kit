@@ -5,65 +5,42 @@ import { Block, Row, TextInput, Dropdown, TextArea, Carousel, Accordion, Button,
 const App = () => {
   return (
     <div className='container bg-light w-75'>
-      <Carousel>
-        <Block
-          layout={'default'}
-          imageUrl={'https://picsum.photos/id/652/200/300'}
-          imageAlt={'Image Alt'}
-          ratio={'4by3'}
-        >
+      <Block
+        layout={'default'}
+        imageUrl={'https://picsum.photos/id/652/200/300'}
+        imageAlt={'Image Alt'}
+        ratio={'4by3'}
+      >
 
-          <Block.Subtitle className={`text-muted font-weight-bold`}>
-            This is the subtitle
+        <Block.Subtitle className={`text-muted font-weight-bold`}>
+          This is the subtitle
           </Block.Subtitle>
 
-          <Block.Title className={`titleWeight`}>
-            One
+        <Block.Title className={`titleWeight`}>
+          One
           </Block.Title>
 
-          <Block.Body className={`pt-1 pb-4 font-weight-light`}>
-            {[0, 1, 2, 3, 4, 5, 6].map(n => <p>{n}</p>)}
-          </Block.Body>
-        </Block>
-        <Block
-          layout={'default'}
-          imageUrl={'https://picsum.photos/id/652/200/300'}
-          imageAlt={'Image Alt'}
-          ratio={'4by3'}
-        >
+        <Block.Body className={`pt-1 pb-4 font-weight-light`}>
 
-          <Block.Subtitle className={`text-muted font-weight-bold`}>
-            This is the subtitle
-          </Block.Subtitle>
+        </Block.Body>
 
-          <Block.Title className={`titleWeight`}>
-            Two
-          </Block.Title>
+        <Button call="Primary Lg" size="lg" type="link" />
+        <Button call="Secondary Lg" size="lg" type="link" />
+        <Button call="Teriary Lg" size="lg" type="link" />
 
-          <Block.Body className={`pt-1 pb-4 font-weight-light`}>
-            {[0, 1, 2, 3, 4, 5, 6].map(n => <p>{n}</p>)}
-          </Block.Body>
-        </Block>
-        <Block
-          layout={'default'}
-          imageUrl={'https://picsum.photos/id/652/200/300'}
-          imageAlt={'Image Alt'}
-          ratio={'4by3'}
-        >
+        <hr></hr>
 
-          <Block.Subtitle className={`text-muted font-weight-bold`}>
-            This is the subtitle
-          </Block.Subtitle>
+        <Button call="Primary" type="link" />
+        <Button call="Secondary" type="link" />
+        <Button call="Teriary" type="link" />
 
-          <Block.Title className={`titleWeight`}>
-            Three
-          </Block.Title>
+        <hr></hr>
 
-          <Block.Body className={`pt-1 pb-4 font-weight-light`}>
-            {[0, 1, 2, 3, 4, 5, 6].map(n => <p>{n}</p>)}
-          </Block.Body>
-        </Block>
-      </Carousel>
+        <Button call="Primary Sm" size="sm" type="link" />
+        <Button call="Secondary Sm" size="sm" type="link" />
+        <Button call="Teriary Sm" size="sm" type="link" />
+
+      </Block>
 
 
     </div>

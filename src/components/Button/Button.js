@@ -1,30 +1,44 @@
-import React from "react"
+import React from 'react'
+import classnames from 'classnames'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/pro-light-svg-icons'
 
+const Button = ({
+  size,
+  type,
+  call,
+  action
+}) => {
 
-const Button = ({ size, type, call, action }) => {
-  
-  if (type === "secondary") {
+  if (type === "dark") {
     type = "outline-dark";
-  } else if (type === "tertiary") {
+  } else if (type === "light") {
     type = "outline-light";
+  } else if (type !== 'link' && type !== 'primary') {
+    type = 'primary'
   }
 
+  const classes = classnames(
+    'btn',
+    size !== '' ? `btn-${size}` : '',
+    `btn-${type}`,
+    type !== 'link' ? 'text-uppercase' : '',
+    'font-weight-bold',
+  )
+
   return (
-    <button
-      href={action}
-      className={`btn btn-${size} btn-${type} text-uppercase font-weight-bold`}
-    >
-      {call}
+    <button onClick={action} className={classes}>
+      {call} {type === 'link' && <FontAwesomeIcon icon={faAngleRight} className="ml-1 mb-0" />}
     </button>
   )
 }
 
 Button.defaultProps = {
-  size: 'lg',
+  size: '',
   type: 'primary',
   call: 'default',
-  action:'action'
+  action: () => { }
 }
 
 
-export default Button; 
+export default Button

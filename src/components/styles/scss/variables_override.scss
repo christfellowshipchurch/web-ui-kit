@@ -1,0 +1,35 @@
+// Color Overrides
+$cyan: #00aeef;
+
+$primary: $cyan;
+
+// border
+$border-width: 2px !default;
+
+//font size
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .75 !default;
+
+// Button overrides
+$btn-border-radius: 50rem;
+$btn-border-radius-lg: 50rem;
+$btn-border-radius-sm: 50rem;
+
+$input-btn-padding-y: .5rem !default;
+$input-btn-padding-x: 3rem !default;
+
+$input-btn-padding-y-sm: .5rem !default;
+$input-btn-padding-x-sm: 1rem !default;
+
+$input-btn-padding-y-lg: .5rem !default;
+$input-btn-padding-x-lg: 6rem !default;
+
+//border-radius
+$border-radius: 15px;
+
+//font overrides
+
+//Carousel overrides
+$carousel-control-opacity: 0;
+$carousel-control-hover-opacity: 0;
