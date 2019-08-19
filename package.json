@@ -1,6 +1,6 @@
 {
   "name": "@christfellowshipchurch/web-ui-kit",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Web UI Kit package for Christ Fellowship web projects",
   "main": "lib/index.js",
   "scripts": {
