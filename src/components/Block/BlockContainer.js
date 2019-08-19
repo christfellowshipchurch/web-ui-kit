@@ -22,7 +22,7 @@ const BlockContainer = ({
   const mediaItem = media
     ? (
       <div>
-        <Media {...media} rounded />
+        <Media {...media} />
       </div>
     )
     : imageUrl || videoUrl
