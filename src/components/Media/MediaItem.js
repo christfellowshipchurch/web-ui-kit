@@ -1,16 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 
 import Image from './Image'
 import Video from './Video'
 
 const MediaItem = ({
-  ratio, imageUrl, imageAlt, videoUrl, className, children, rounded
+  ratio, imageUrl, imageAlt, videoUrl, className, children, rounded, circle
 }) => {
+  let rounding = rounded ? 'rounded' : ''
+  if (circle) {
+    ratio = '1by1'
+    rounded = false
+    rounding = 'rounded-circle'
+  }
 
   return (
-    <div className={`embed-responsive embed-responsive-${ratio}`}>
+    <div className={`embed-responsive embed-responsive-${ratio} ${rounding}`}>
       <Image source={imageUrl} alt={imageAlt} className='embed-responsive-item' />
       {videoUrl
         ? <Video source={videoUrl} className='embed-responsive-item' />

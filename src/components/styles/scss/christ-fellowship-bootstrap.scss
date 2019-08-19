@@ -12,6 +12,12 @@
 //     }
 // }
 
+// Image Styling
+.embed-responsive-item {
+    // forces media items to not stretch
+    object-fit: cover;
+}
+
 .btn-lg {
     min-width: 250px;
     // padding: 1rem 1.5rem;

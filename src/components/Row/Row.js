@@ -6,12 +6,6 @@ const Row = ({ children }) => {
         row: classnames(
             'row',
             'align-items-center'
-        ),
-        col: classnames(
-            'col-12',
-            'col-md-6',
-            'p-0',
-            'd-flex align-self-stretch'
         )
     }
 

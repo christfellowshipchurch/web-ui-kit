@@ -1,6 +1,6 @@
-import Item from './MediaItem';
-import Image from './Image';
-import Video from './Video';
+import Item from './MediaItem'
+import Image from './Image'
+import Video from './Video'
 
 const MediaItem = Item
 MediaItem.Image = Image
