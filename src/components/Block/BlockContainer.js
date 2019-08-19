@@ -41,14 +41,12 @@ const BlockContainer = ({
 
   return (
     <div className={`container-fluid ${className}`}>
-      <div className="row">
+      <div className="row align-items-center">
         <div className={`col-12 ${mediaColSize} ${mediaColOrder}`}>
           {mediaItem}
         </div>
-        <div className={`col-12 col-md ${textAlignment} ${centerContentVH}`}>
-          <div>
-            {children}
-          </div>
+        <div className={`col-12 col-md ${textAlignment}`}>
+          {children}
         </div>
       </div>
     </div>
