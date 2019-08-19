@@ -1,5 +1,16 @@
 // Color Overrides
+$gray-100: #e6e6e6 !default;
+$gray-200: #cdcdcd !default;
+$gray-300: #b4b4b4 !default;
+$gray-400: #9b9b9b !default;
+$gray-500: #828282 !default;
+$gray-600: #696969 !default;
+$gray-700: #525252 !default;
+$gray-800: #363636 !default;
+$gray-900: #1a1a1a !default;
+
 $cyan: #00aeef;
+$dark: $gray-700 !default;
 
 $primary: $cyan;
 
