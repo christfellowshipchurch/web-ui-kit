@@ -85,4 +85,58 @@ describe('BlockContainer', () => {
 
         expect(tree).toMatchSnapshot()
     })
+
+    it('renders a content Block with the inverted layout', () => {
+    const tree = renderer.create(
+            <Block
+                videoUrl="https://video.url.com"
+                imageUrl="https://image.url.com"
+                imageAlt="Image Alt"
+                ratio="21by9"
+                layout="inverted"
+            >
+                <Block.Title larger>Title</Block.Title>
+                <Block.Subtitle larger>Subtitle</Block.Subtitle>
+                <Block.Body>Block body.</Block.Body>
+            </Block>
+        )
+
+        expect(tree).toMatchSnapshot()
+    })
+
+    it('renders a content Block with the right layout', () => {
+        const tree = renderer.create(
+                <Block
+                    videoUrl="https://video.url.com"
+                    imageUrl="https://image.url.com"
+                    imageAlt="Image Alt"
+                    ratio="21by9"
+                    layout="right"
+                >
+                    <Block.Title larger>Title</Block.Title>
+                    <Block.Subtitle larger>Subtitle</Block.Subtitle>
+                    <Block.Body>Block body.</Block.Body>
+                </Block>
+            )
+    
+            expect(tree).toMatchSnapshot()
+        })
+
+        it('renders a content Block with the left layout', () => {
+            const tree = renderer.create(
+                    <Block
+                        videoUrl="https://video.url.com"
+                        imageUrl="https://image.url.com"
+                        imageAlt="Image Alt"
+                        ratio="21by9"
+                        layout="left"
+                    >
+                        <Block.Title larger>Title</Block.Title>
+                        <Block.Subtitle larger>Subtitle</Block.Subtitle>
+                        <Block.Body>Block body.</Block.Body>
+                    </Block>
+                )
+        
+                expect(tree).toMatchSnapshot()
+            })
 })
