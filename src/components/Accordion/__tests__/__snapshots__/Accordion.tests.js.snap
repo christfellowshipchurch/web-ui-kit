@@ -1,78 +1,136 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Accordion renders an accordion with items inside 1`] = `
-<div>
+<div
+  className="container d-flex justify-content-center undefined"
+>
   <div
-    className=""
-    status="closed"
+    className="row d-flex flex-column p-2"
   >
-    <button
-      onClick={[Function]}
+    <h2
+      className="font-weight-bold text-center"
+    />
+    <p
+      className="font-weight-light text-center"
+    />
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className=""
+      status="closed"
     >
-      <div>
-        Item 1
-      </div>
-      <div>
-        <span />
-        <span />
-      </div>
-    </button>
-    <div>
-      <div>
-        <div
-          title="Item 1"
+      <button
+        className="d-flex align-items-center undefined"
+        onClick={[Function]}
+      >
+        <div>
+          Item 1
+        </div>
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-angle-down fa-w-8 fa-2x ml-auto"
+          data-icon="angle-down"
+          data-prefix="fal"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 256 512"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          This is item 1
+          <path
+            d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+      <div>
+        <div>
+          <div
+            title="Item 1"
+          >
+            This is item 1
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className=""
-    status="closed"
-  >
-    <button
-      onClick={[Function]}
+    <div
+      className=""
+      status="closed"
     >
-      <div>
-        Item 2
-      </div>
-      <div>
-        <span />
-        <span />
-      </div>
-    </button>
-    <div>
-      <div>
-        <div
-          title="Item 2"
+      <button
+        className="d-flex align-items-center undefined"
+        onClick={[Function]}
+      >
+        <div>
+          Item 2
+        </div>
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-angle-down fa-w-8 fa-2x ml-auto"
+          data-icon="angle-down"
+          data-prefix="fal"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 256 512"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          This is item 2
+          <path
+            d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+      <div>
+        <div>
+          <div
+            title="Item 2"
+          >
+            This is item 2
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className=""
-    status="closed"
-  >
-    <button
-      onClick={[Function]}
+    <div
+      className=""
+      status="closed"
     >
-      <div>
-        Item 3
-      </div>
-      <div>
-        <span />
-        <span />
-      </div>
-    </button>
-    <div>
-      <div>
-        <div
-          title="Item 3"
+      <button
+        className="d-flex align-items-center undefined"
+        onClick={[Function]}
+      >
+        <div>
+          Item 3
+        </div>
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-angle-down fa-w-8 fa-2x ml-auto"
+          data-icon="angle-down"
+          data-prefix="fal"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 256 512"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          This is item 3
+          <path
+            d="M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+      <div>
+        <div>
+          <div
+            title="Item 3"
+          >
+            This is item 3
+          </div>
         </div>
       </div>
     </div>
