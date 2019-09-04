@@ -4,32 +4,17 @@ import { Block, Row, TextInput, Dropdown, TextArea, Carousel, Accordion, Button,
 
 const App = () => {
   return (
-    <div className='container bg-light w-75'>
-      <Block
-        layout={'default'}
-        media={{
-          imageUrl: 'https://picsum.photos/id/652/200/300',
-          imageAlt: 'Image Alt',
-          ratio: '16by9',
-          circle: true
-        }}
-      >
-
-        <Block.Subtitle className={`text-muted font-weight-bold`}>
-          This is the subtitle
-          </Block.Subtitle>
-
-        <Block.Title className={`titleWeight`}>
-          One
-        </Block.Title>
-
-        <Block.Body className={`pt-1 pb-4 font-weight-light`}>
-
-        </Block.Body>
-
-      </Block>
-
-
+    <div className='container w-75 mt-5'>
+      <span className="display-1">Display 1</span>
+      <span className="display-2">Display 2</span>
+      <span className="display-3">Display 3</span>
+      <span className="display-4">Display 4</span>
+      <h1>Heading One</h1>
+      <h2>Heading Two</h2>
+      <h3>Heading Three</h3>
+      <h4>Heading Four</h4>
+      <h5>Heading Five</h5>
+      <h6>Heading Six</h6>
     </div>
   )
 }
