@@ -2,23 +2,46 @@
 
 exports[`MediaItem renders a rounded media item 1`] = `
 <div
-  className=""
+  className="embed-responsive embed-responsive-1by1 rounded"
 >
-  <div>
-    <div />
+  <div
+    className="fill d-flex justify-content-center align-items-center"
+  >
+    <div
+      className="spinner-border text-primary"
+      role="status"
+    >
+      <span
+        className="sr-only"
+      >
+        Loading...
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`MediaItem renders a video with a background image 1`] = `
 <div
-  className=""
+  className="embed-responsive embed-responsive-1by1 "
 >
-  <div>
-    <div />
+  <div
+    className="fill d-flex justify-content-center align-items-center"
+  >
+    <div
+      className="spinner-border text-primary"
+      role="status"
+    >
+      <span
+        className="sr-only"
+      >
+        Loading...
+      </span>
+    </div>
   </div>
   <video
     autoPlay={true}
+    className="embed-responsive-item"
     loop={true}
     muted={true}
     playsInline={true}
@@ -33,22 +56,46 @@ exports[`MediaItem renders a video with a background image 1`] = `
 
 exports[`MediaItem renders an image with no video 1`] = `
 <div
-  className=""
+  className="embed-responsive embed-responsive-1by1 "
 >
-  <div>
-    <div />
+  <div
+    className="fill d-flex justify-content-center align-items-center"
+  >
+    <div
+      className="spinner-border text-primary"
+      role="status"
+    >
+      <span
+        className="sr-only"
+      >
+        Loading...
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`MediaItem renders content overtop of an image 1`] = `
 <div
-  className=""
+  className="embed-responsive embed-responsive-1by1 "
 >
-  <div>
-    <div />
+  <div
+    className="fill d-flex justify-content-center align-items-center"
+  >
+    <div
+      className="spinner-border text-primary"
+      role="status"
+    >
+      <span
+        className="sr-only"
+      >
+        Loading...
+      </span>
+    </div>
   </div>
-  <div>
+  <div
+    className="fill d-flex justify-content-center align-items-center"
+  >
     <h1>
       This is content overtop of an image
     </h1>
