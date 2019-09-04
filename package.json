@@ -64,6 +64,7 @@
     "node-sass": "^4.12.0",
     "popper.js": "^1.14.7",
     "prop-types": "^15.7.2",
+    "react-deprecate": "^0.1.0",
     "react-image": "^2.0.0",
     "react-slick": "^0.24.0",
     "slick-carousel": "^1.8.1"
