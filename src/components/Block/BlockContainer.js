@@ -44,7 +44,7 @@ const BlockContainer = ({
         <div className={`col-12 ${mediaColSize} ${mediaColOrder}`}>
           {mediaItem}
         </div>
-        <div className={`col-12 col-md ${textAlignment}`}>
+        <div className={`col-12 col-md ${textAlignment} px-5`}>
           {children}
         </div>
       </div>
