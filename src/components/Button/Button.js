@@ -16,7 +16,7 @@ const Button = ({
     type = "outline-dark";
   } else if (type === "light") {
     type = "outline-light";
-  } else if (type !== 'link' && type !== 'primary') {
+  } else if (type !== 'link') {
     type = 'primary'
   }
 
@@ -38,8 +38,8 @@ const Button = ({
 Button.defaultProps = {
   size: '',
   type: 'primary',
-  call: 'default',
-  action: () => { }
+  title: 'default',
+  onClick: () => { }
 }
 
 
