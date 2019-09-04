@@ -30,7 +30,7 @@ const Button = ({
 
   return (
     <button onClick={onClick} className={classes}>
-      {title} {type === 'link' && <FontAwesomeIcon icon={faAngleRight} className="ml-1 mb-0" />}
+      {title}
     </button>
   )
 }
