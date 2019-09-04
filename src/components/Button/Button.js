@@ -3,11 +3,13 @@ import classnames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/pro-light-svg-icons'
 
+import renamePropsWithWarning from 'react-deprecate'
+
 const Button = ({
   size,
   type,
-  call,
-  action
+  title,
+  onClick
 }) => {
 
   if (type === "dark") {
@@ -27,8 +29,8 @@ const Button = ({
   )
 
   return (
-    <button onClick={action} className={classes}>
-      {call} {type === 'link' && <FontAwesomeIcon icon={faAngleRight} className="ml-1 mb-0" />}
+    <button onClick={onClick} className={classes}>
+      {title} {type === 'link' && <FontAwesomeIcon icon={faAngleRight} className="ml-1 mb-0" />}
     </button>
   )
 }
@@ -41,4 +43,8 @@ Button.defaultProps = {
 }
 
 
-export default Button
+export default renamePropsWithWarning(
+  Button,
+  { call: 'title', action: 'onClick' },
+  ({ componentName, prop, renamedProps }) => `${componentName} warning: ${prop} is deprecated and will be removed in future releases. Please use ${renamedProps}`
+)
