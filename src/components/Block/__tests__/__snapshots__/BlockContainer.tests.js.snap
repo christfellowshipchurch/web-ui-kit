@@ -36,7 +36,7 @@ exports[`BlockContainer renders a content Block with the inverted layout 1`] = `
     >
       <div>
         <div
-          className="embed-responsive embed-responsive-21by9 rounded"
+          className="embed-responsive embed-responsive-21by9 rounded "
         >
           <div
             className="fill d-flex justify-content-center align-items-center"
@@ -96,7 +96,7 @@ exports[`BlockContainer renders a content Block with the left layout 1`] = `
     >
       <div>
         <div
-          className="embed-responsive embed-responsive-21by9 rounded"
+          className="embed-responsive embed-responsive-21by9 rounded "
         >
           <div
             className="fill d-flex justify-content-center align-items-center"
@@ -156,7 +156,7 @@ exports[`BlockContainer renders a content Block with the right layout 1`] = `
     >
       <div>
         <div
-          className="embed-responsive embed-responsive-21by9 rounded"
+          className="embed-responsive embed-responsive-21by9 rounded "
         >
           <div
             className="fill d-flex justify-content-center align-items-center"
@@ -216,7 +216,7 @@ exports[`BlockContainer renders a larger title and subtitle 1`] = `
     >
       <div>
         <div
-          className="embed-responsive embed-responsive-21by9 rounded"
+          className="embed-responsive embed-responsive-21by9 rounded "
         >
           <div
             className="fill d-flex justify-content-center align-items-center"
@@ -276,7 +276,7 @@ exports[`BlockContainer renders a subtitle in the Block in the default size 1`] 
     >
       <div>
         <div
-          className="embed-responsive embed-responsive-21by9 rounded"
+          className="embed-responsive embed-responsive-21by9 rounded "
         >
           <div
             className="fill d-flex justify-content-center align-items-center"
@@ -336,7 +336,7 @@ exports[`BlockContainer renders a video with background image and Block in defau
     >
       <div>
         <div
-          className="embed-responsive embed-responsive-21by9 rounded"
+          className="embed-responsive embed-responsive-21by9 rounded "
         >
           <div
             className="fill d-flex justify-content-center align-items-center"
@@ -393,7 +393,7 @@ exports[`BlockContainer renders an image and Block in default layout 1`] = `
     >
       <div>
         <div
-          className="embed-responsive embed-responsive-21by9 rounded"
+          className="embed-responsive embed-responsive-21by9 rounded "
         >
           <div
             className="fill d-flex justify-content-center align-items-center"

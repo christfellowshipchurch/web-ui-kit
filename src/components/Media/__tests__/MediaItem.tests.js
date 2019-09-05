@@ -1,6 +1,10 @@
 import React from 'react'
 import MediaItem from '../../Media'
 import renderer from 'react-test-renderer'
+import { shallow, configure } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
+configure({ adapter: new Adapter() })
 
 describe('MediaItem', () => {
     it('renders an image with no video', () => {
@@ -32,6 +36,25 @@ describe('MediaItem', () => {
     it('renders a rounded media item', () => {
         const tree = renderer.create(
             <MediaItem imageUrl="https://img.url.com" imageAlt="Image Alt" rounded />
+        )
+
+        expect(tree).toMatchSnapshot()
+    })
+
+    it('renders a circular media item', () => {
+        const tree = renderer.create(
+            <MediaItem imageUrl="https://img.url.com" imageAlt="Image Alt" circle />
+        )
+
+        expect(tree).toMatchSnapshot()
+    })
+
+    it('renders a media item with manual video controls', () => {
+        const tree = renderer.create(
+            <MediaItem
+                imageUrl="https://img.url.com"
+                imageAlt="Image Alt"
+                videourl="https://video.url.com" />
         )
 
         expect(tree).toMatchSnapshot()
