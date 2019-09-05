@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React, { createRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { faPlayCircle } from '@fortawesome/fontawesome-pro-light'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,18 +19,21 @@ const MediaItem = ({
   playIcon
 }) => {
   const showVideoControls = showControls && !children
+  const [showPlayButton, setShowPlayButton] = useState(showVideoControls)
   const videoProps = showVideoControls
     ? {
       playsInline: false,
       autoPlay: false,
       loop: false,
       muted: false,
-      controls: true
+      controls: !showPlayButton,
     }
     : {}
-
   let videoRef = createRef()
-  console.log({ showVideoControls, videoProps })
+  const playButtonClick = () => {
+    videoRef.current.play()
+    setShowPlayButton(false)
+  }
 
   let rounding = rounded ? 'rounded' : ''
   if (circle) {
@@ -52,13 +55,13 @@ const MediaItem = ({
         )
         : null}
 
-      {(children || showVideoControls) &&
+      {(children || showPlayButton) &&
         <div className='fill d-flex justify-content-center align-items-center'>
           {(showVideoControls && videoRef)
             ? (
               <button
                 className="btn btn-icon"
-                onClick={() => videoRef.current.play()} >
+                onClick={playButtonClick} >
                 <FontAwesomeIcon icon={faPlayCircle} size={playIcon.size} color={playIcon.color} />
               </button>
             )
@@ -77,7 +80,7 @@ const defaultProps = {
   playIcon: {
     as: null,
     color: 'white',
-    size: '2x',
+    size: '3x',
   }
 }
 

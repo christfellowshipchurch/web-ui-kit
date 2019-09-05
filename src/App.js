@@ -6,10 +6,14 @@ const videoUrl = "https://gochristfellowship.com/wp-content/uploads/2018/08/Augu
 
 const App = () => {
   return (
-    <div className='container w-75 mt-5'>
-      <Media
-        showControls
-        videoUrl={videoUrl} />
+    <div className='container mt-5'>
+      <div className="row">
+        <div className="col-4">
+          <Media
+            showControls
+            videoUrl={videoUrl} />
+        </div>
+      </div>
     </div>
   )
 }
