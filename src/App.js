@@ -11,7 +11,9 @@ const App = () => {
         <div className="col-4">
           <Media
             showControls
-            videoUrl={videoUrl} />
+            videoUrl={videoUrl}
+            imageUrl="https://dev-rock.christfellowship.church/GetImage.ashx?guid=90443e44-039f-43c0-9cdf-f63498721ea7"
+          />
         </div>
       </div>
     </div>

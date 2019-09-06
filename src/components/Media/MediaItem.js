@@ -45,17 +45,15 @@ const MediaItem = ({
   return (
     <div className={`embed-responsive embed-responsive-${ratio} ${rounding} ${className}`}>
       <Image source={imageUrl} alt={imageAlt} className='embed-responsive-item' />
-      {videoUrl
-        ? (
-          <Video
-            className='embed-responsive-item'
-            source={videoUrl}
-            {...videoProps}
-            ref={videoRef} />
-        )
-        : null}
+      {videoUrl &&
+        <Video
+          className='embed-responsive-item'
+          source={videoUrl}
+          {...videoProps}
+          ref={videoRef} />
+      }
 
-      {(children || showPlayButton) &&
+      {(children || (showPlayButton && videoUrl)) &&
         <div className='fill d-flex justify-content-center align-items-center'>
           {(showVideoControls && videoRef)
             ? (
