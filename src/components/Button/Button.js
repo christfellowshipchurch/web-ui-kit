@@ -1,15 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight } from '@fortawesome/pro-light-svg-icons'
-
 import renamePropsWithWarning from 'react-deprecate'
 
 const Button = ({
   size,
   type,
   title,
-  onClick
+  onClick,
+  className
 }) => {
 
   if (type === "dark") {
@@ -26,6 +25,7 @@ const Button = ({
     `btn-${type}`,
     type !== 'link' ? 'text-uppercase' : '',
     'font-weight-bold',
+    className
   )
 
   return (
@@ -39,7 +39,16 @@ Button.defaultProps = {
   size: '',
   type: 'primary',
   title: 'default',
-  onClick: () => { }
+  onClick: () => { },
+  className: ''
+}
+
+Button.propTypes = {
+  size: PropTypes.string,
+  type: PropTypes.string,
+  title: PropTypes.string,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
 }
 
 
