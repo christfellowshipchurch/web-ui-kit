@@ -2018,7 +2018,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #e6e6e6;
+  color: #00aeef;
   text-decoration: none; }
   .btn-link:hover {
     color: #0076a3;
@@ -6999,6 +6999,82 @@ a.text-dark:hover, a.text-dark:focus {
 .embed-responsive-item {
   object-fit: cover; }
 
+.border-primary {
+  border-color: #00aeef !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.border-secondary {
+  border-color: #696969 !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.border-success {
+  border-color: #28a745 !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.border-info {
+  border-color: #00aeef !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.border-warning {
+  border-color: #ffc107 !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.border-danger {
+  border-color: #dc3545 !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.border-light {
+  border-color: #e6e6e6 !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.border-dark {
+  border-color: #525252 !important;
+  transition: border-color 0.5s;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s; }
+
+.input-label {
+  pointer-events: none;
+  position: absolute;
+  font-size: 1rem;
+  top: auto;
+  transition: top 0.5s, font-size 0.5s;
+  -webkit-transition: top 0.5s, font-size 0.5s;
+  -moz-transition: top 0.5s, font-size 0.5s;
+  -o-transition: top 0.5s, font-size 0.5s; }
+
+.input-label-sm {
+  pointer-events: none;
+  position: absolute;
+  font-size: 0.75rem;
+  top: 0;
+  transition: top 0.5s, font-size 0.5s;
+  -webkit-transition: top 0.5s, font-size 0.5s;
+  -moz-transition: top 0.5s, font-size 0.5s;
+  -o-transition: top 0.5s, font-size 0.5s; }
+
 input[type=text],
 input[type=text]:focus {
   border-width: 0;
@@ -7061,6 +7137,9 @@ textarea {
 /* Position Styling */
 .p-absolute {
   position: absolute !important; }
+
+.p-relative {
+  position: relative !important; }
 
 /* Layout Helpers */
 .fill {

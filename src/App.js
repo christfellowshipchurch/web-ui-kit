@@ -8,9 +8,10 @@ const App = () => {
   return (
     <div className='container mt-5'>
       <div className="row">
-        <div className="col-4">
-          <Button call="Call" />
-          <Button title="Title" />
+        <div className="col-4 bg-light">
+          <TextInput
+            label="Label"
+          />
         </div>
       </div>
     </div>
