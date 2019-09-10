@@ -7,8 +7,8 @@ describe('Button', () => {
     it('renders a Default Button with deprecated properties', () => {
         const tree = renderer.create(
             <Button
-                call="Button Title"
-                action={() => true}
+                title="Button Title"
+                onClick={() => true}
             />
         )
 
