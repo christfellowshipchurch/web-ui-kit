@@ -42,6 +42,8 @@ const MediaItem = ({
     rounding = 'rounded-circle'
   }
 
+  // TODO : test where the showControls is passed in, but no value URL exists
+
   return (
     <div className={`embed-responsive embed-responsive-${ratio} ${rounding} ${className}`}>
       <Image source={imageUrl} alt={imageAlt} className='embed-responsive-item' />

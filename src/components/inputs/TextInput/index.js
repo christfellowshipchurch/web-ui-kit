@@ -21,6 +21,7 @@ const TextInput = ({
   onChange,
   withSuccess,
   value,
+  icon,
   ...inputProps
 }) => {
   const [focused, setFocused] = useState(false)
@@ -48,7 +49,7 @@ const TextInput = ({
       description={error && !disabled ? error : description}
       focused={focused || !!inputValue}
       hasValue={!!inputValue && inputValue !== ''}
-      prefix={<InputIcon icon={faUser} color={prefixColor} />}
+      prefix={<InputIcon icon={icon} color={prefixColor} />}
       suffix={suffix && <InputIcon icon={suffix.icon} color={suffix.color} />}
     >
       <input
@@ -68,11 +69,13 @@ const TextInput = ({
 }
 
 TextInput.defaultProps = {
-  onChange: () => { }
+  onChange: () => { },
+  icon: faUser
 }
 
 TextInput.propTypes = {
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  icon: PropTypes.object
 }
 
 export default TextInput

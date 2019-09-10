@@ -1,5 +1,6 @@
 import React from 'react'
 import './components/styles/css/christ-fellowship-bootstrap.css'
+import { faEnvelope } from '@fortawesome/fontawesome-pro-light'
 import { Block, Row, TextInput, Dropdown, TextArea, Carousel, Accordion, Button, Media } from './components'
 
 const videoUrl = "https://gochristfellowship.com/wp-content/uploads/2018/08/August_2018_Home_Video.mp4"
@@ -12,6 +13,7 @@ const App = () => {
           <TextInput
             label="Label"
             description="Description"
+            icon={faEnvelope}
           />
         </div>
         <div className="col-4 bg-white">
