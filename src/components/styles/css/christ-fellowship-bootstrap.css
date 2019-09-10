@@ -7065,6 +7065,10 @@ a.text-dark:hover, a.text-dark:focus {
   -moz-transition: top 0.5s, font-size 0.5s;
   -o-transition: top 0.5s, font-size 0.5s; }
 
+.input-label-lower {
+  position: absolute;
+  bottom: 0; }
+
 .input-label-sm {
   pointer-events: none;
   position: absolute;
@@ -7080,8 +7084,8 @@ input[type=text]:focus {
   border-width: 0;
   outline: none; }
 
-label {
-  font-size: .8rem; }
+input[type=text]:placeholder {
+  color: #525252; }
 
 textarea {
   width: 325px;
@@ -7125,8 +7129,7 @@ textarea {
   width: 0.9em;
   height: 0.9rem;
   margin: 0rem 0.3rem;
-  border-radius: 100%;
-  background-color: black; }
+  border-radius: 100%; }
 
 .img-circle {
   width: 10rem;

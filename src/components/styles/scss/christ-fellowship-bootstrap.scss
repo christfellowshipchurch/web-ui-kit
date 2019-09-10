@@ -99,6 +99,11 @@ $input-label-transitions: top $input-label-transition-speed, font-size $input-la
     @include input-label-transition;
 }
 
+.input-label-lower {
+    position: absolute;
+    bottom: 0;
+}
+
 .input-label-sm {
     pointer-events: none;
     position: absolute;
@@ -113,8 +118,8 @@ input[type=text]:focus {
     outline: none;
 }
 
-label {
-    font-size: .8rem
+input[type=text]:placeholder {
+    color: $dark;
 }
 
 textarea {
@@ -177,7 +182,6 @@ textarea {
         height: 0.9rem;
         margin: 0rem 0.3rem;
         border-radius: 100%;
-        background-color: black;
     }
 }
 

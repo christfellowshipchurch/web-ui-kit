@@ -17,14 +17,13 @@ const InputContainer = ({
     return (
         <div>
             <div className={classnames(
-                'bg-white',
                 'd-flex',
                 'flex-row',
                 'align-items-end',
                 'border-bottom',
                 `border-${focused ? 'primary' : 'light'}`,
-                'pb-1',
-                'px-1'
+                'pb-2',
+                'px-1',
             )}>
                 {prefix}
                 <div className={classnames(
@@ -32,7 +31,7 @@ const InputContainer = ({
                     'form-group',
                     'mb-0',
                     'pt-3',
-                    'px-1',
+                    'px-2',
                     'p-relative'
                 )} >
                     {label &&
@@ -46,6 +45,13 @@ const InputContainer = ({
                 </div>
                 {suffix}
             </div>
+            {description &&
+                <small className={classnames(
+                    "form-text",
+                    "text-muted",
+                )}>
+                    {description}
+                </small>}
         </div>
     )
 }
@@ -57,7 +63,7 @@ InputContainer.defaultProps = {
     description: null,
     focused: false,
     placeholder: null,
-    hasValue: false
+    hasValue: false,
 }
 
 InputContainer.propTypes = {
@@ -67,7 +73,8 @@ InputContainer.propTypes = {
     description: PropTypes.string,
     focused: PropTypes.bool,
     placeholder: PropTypes.string,
-    hasValue: PropTypes.bool
+    hasValue: PropTypes.bool,
+    children: PropTypes.element.isRequired
 }
 
 export default InputContainer
