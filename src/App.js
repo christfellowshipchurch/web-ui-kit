@@ -8,9 +8,39 @@ const App = () => {
   return (
     <div className='container mt-5'>
       <div className="row">
-        <div className="col-4">
-          <Button call="Call" />
-          <Button title="Title" />
+        <div className="col-4 bg-white">
+          <TextInput
+            label="Label"
+            description="Description"
+          />
+        </div>
+        <div className="col-4 bg-white">
+          <TextInput
+            label="Label"
+            description="Description"
+            placeholder="Placeholder"
+          />
+        </div>
+        <div className="col-4 bg-white">
+          <TextInput
+            label="Label"
+            description="Description"
+            value="Value"
+            withSuccess
+          />
+        </div>
+        <div className="col-4 bg-white">
+          <TextInput
+            label="Label"
+            error="Here's and error"
+          />
+        </div>
+        <div className="col-4 bg-white">
+          <TextInput
+            label="Label"
+            description="Description"
+            disabled
+          />
         </div>
       </div>
     </div>

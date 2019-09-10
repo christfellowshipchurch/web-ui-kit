@@ -56,6 +56,23 @@
     object-fit: cover;
 }
 
+// Borders
+$border-color-transition-speed: 0.5s;
+$border-color-transitions: border-color $border-color-transition-speed;
+@mixin border-color-transition {
+    transition: $border-color-transitions;
+    -webkit-transition: $border-color-transitions;
+    -moz-transition: $border-color-transitions;
+    -o-transition: $border-color-transitions;
+}
+@each $color, $value in $theme-colors {
+    .border-#{$color} {
+      border-color: $value !important;
+      @include border-color-transition;
+    }
+}
+
+// Buttons
 @mixin button-outline-variant {
 
     &:not(:disabled):not(.disabled).active,
@@ -64,14 +81,45 @@
     }
 }
 
+// Forms
+$input-label-transition-speed: 0.5s;
+$input-label-transitions: top $input-label-transition-speed, font-size $input-label-transition-speed;
+@mixin input-label-transition {
+    transition: $input-label-transitions;
+    -webkit-transition: $input-label-transitions;
+    -moz-transition: $input-label-transitions;
+    -o-transition: $input-label-transitions;
+}
+.input-label {
+    pointer-events: none;
+    position: absolute;
+    font-size: $font-size-base;
+    top: auto;
+
+    @include input-label-transition;
+}
+
+.input-label-lower {
+    position: absolute;
+    bottom: 0;
+}
+
+.input-label-sm {
+    pointer-events: none;
+    position: absolute;
+    font-size: $font-size-sm;
+    top: 0;
+    @include input-label-transition;
+}
+
 input[type=text],
 input[type=text]:focus {
     border-width: 0;
     outline: none;
 }
 
-label {
-    font-size: .8rem
+input[type=text]:placeholder {
+    color: $dark;
 }
 
 textarea {
@@ -134,7 +182,6 @@ textarea {
         height: 0.9rem;
         margin: 0rem 0.3rem;
         border-radius: 100%;
-        background-color: black;
     }
 }
 
@@ -147,6 +194,7 @@ textarea {
 
 /* Position Styling */
 .p-absolute { position: absolute !important; }
+.p-relative { position: relative !important; }
 
 /* Layout Helpers */
 .fill { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
