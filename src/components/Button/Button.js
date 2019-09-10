@@ -2,34 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import renamePropsWithWarning from 'react-deprecate'
+import { get } from 'lodash'
 
 const Button = ({
   size,
   type,
   title,
-  onClick,
-  className
+  className,
+  ...buttonProps
 }) => {
-
-  if (type === "dark") {
-    type = "outline-dark";
-  } else if (type === "light") {
-    type = "outline-light";
-  } else if (type !== 'link') {
-    type = 'primary'
-  }
+  const btnType = get({
+    dark: 'outline-dark',
+    light: 'outline-light',
+    link: 'link'
+  }, type, 'primary')
 
   const classes = classnames(
     'btn',
     size !== '' ? `btn-${size}` : '',
-    `btn-${type}`,
+    `btn-${btnType}`,
     type !== 'link' ? 'text-uppercase' : '',
     'font-weight-bold',
     className
   )
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button
+      className={classes}
+      {...buttonProps} >
       {title}
     </button>
   )
@@ -39,7 +39,6 @@ Button.defaultProps = {
   size: '',
   type: 'primary',
   title: 'default',
-  onClick: () => { },
   className: ''
 }
 
@@ -47,7 +46,6 @@ Button.propTypes = {
   size: PropTypes.string,
   type: PropTypes.string,
   title: PropTypes.string,
-  onClick: PropTypes.func,
   className: PropTypes.string,
 }
 
