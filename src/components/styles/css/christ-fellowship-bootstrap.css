@@ -1875,7 +1875,7 @@ fieldset:disabled a.btn {
 .btn-outline-primary {
   color: #00aeef;
   border-color: #00aeef; }
-  .btn-outline-primary:hover {
+  .btn-outline-primary:not(:disabled):not(.disabled):hover {
     color: #0081b2;
     border-color: #0081b2; }
   .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -1893,7 +1893,7 @@ fieldset:disabled a.btn {
 .btn-outline-secondary {
   color: #696969;
   border-color: #696969; }
-  .btn-outline-secondary:hover {
+  .btn-outline-secondary:not(:disabled):not(.disabled):hover {
     color: #4a4a4a;
     border-color: #4a4a4a; }
   .btn-outline-secondary:focus, .btn-outline-secondary.focus {
@@ -1911,7 +1911,7 @@ fieldset:disabled a.btn {
 .btn-outline-success {
   color: #28a745;
   border-color: #28a745; }
-  .btn-outline-success:hover {
+  .btn-outline-success:not(:disabled):not(.disabled):hover {
     color: #1c7631;
     border-color: #1c7631; }
   .btn-outline-success:focus, .btn-outline-success.focus {
@@ -1929,7 +1929,7 @@ fieldset:disabled a.btn {
 .btn-outline-info {
   color: #00aeef;
   border-color: #00aeef; }
-  .btn-outline-info:hover {
+  .btn-outline-info:not(:disabled):not(.disabled):hover {
     color: #0081b2;
     border-color: #0081b2; }
   .btn-outline-info:focus, .btn-outline-info.focus {
@@ -1947,7 +1947,7 @@ fieldset:disabled a.btn {
 .btn-outline-warning {
   color: #ffc107;
   border-color: #ffc107; }
-  .btn-outline-warning:hover {
+  .btn-outline-warning:not(:disabled):not(.disabled):hover {
     color: #c99700;
     border-color: #c99700; }
   .btn-outline-warning:focus, .btn-outline-warning.focus {
@@ -1965,7 +1965,7 @@ fieldset:disabled a.btn {
 .btn-outline-danger {
   color: #dc3545;
   border-color: #dc3545; }
-  .btn-outline-danger:hover {
+  .btn-outline-danger:not(:disabled):not(.disabled):hover {
     color: #b51f2e;
     border-color: #b51f2e; }
   .btn-outline-danger:focus, .btn-outline-danger.focus {
@@ -1983,7 +1983,7 @@ fieldset:disabled a.btn {
 .btn-outline-light {
   color: #e6e6e6;
   border-color: #e6e6e6; }
-  .btn-outline-light:hover {
+  .btn-outline-light:not(:disabled):not(.disabled):hover {
     color: #c7c7c7;
     border-color: #c7c7c7; }
   .btn-outline-light:focus, .btn-outline-light.focus {
@@ -2001,7 +2001,7 @@ fieldset:disabled a.btn {
 .btn-outline-dark {
   color: #525252;
   border-color: #525252; }
-  .btn-outline-dark:hover {
+  .btn-outline-dark:not(:disabled):not(.disabled):hover {
     color: #333333;
     border-color: #333333; }
   .btn-outline-dark:focus, .btn-outline-dark.focus {

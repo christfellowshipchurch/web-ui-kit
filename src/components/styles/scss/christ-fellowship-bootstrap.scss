@@ -73,13 +73,12 @@ $border-color-transitions: border-color $border-color-transition-speed;
 }
 
 // Buttons
-@mixin button-outline-variant {
-
-    &:not(:disabled):not(.disabled).active,
-    .show>&.dropdown-toggle {
-        background-color: transparent;
-    }
-}
+// @mixin button-outline-variant {
+//     &:not(:disabled):not(.disabled).active,
+//     .show>&.dropdown-toggle {
+//         background-color: transparent;
+//     }
+// }
 
 // Forms
 $input-label-transition-speed: 0.5s;

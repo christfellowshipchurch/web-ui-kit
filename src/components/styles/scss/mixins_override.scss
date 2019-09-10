@@ -1,8 +1,8 @@
 @mixin button-outline-variant($color, $color-hover: darken($color, 12%), $active-border: darken($color, 12%)) {
   color: $color;
   border-color: $color;
-  
-  @include hover {
+
+  &:not(:disabled):not(.disabled):hover {
     color: $color-hover;
     border-color: $active-border;
   }

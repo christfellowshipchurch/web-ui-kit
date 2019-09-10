@@ -9,40 +9,21 @@ const App = () => {
   return (
     <div className='container mt-5'>
       <div className="row">
-        <div className="col-4 bg-white">
-          <TextInput
-            label="Label"
-            description="Description"
-            icon={faEnvelope}
-          />
+        <div className="col-4 p-5 bg-white">
+          <Button type="primary" title="Title" onClick={() => console.log('Hello there')} />
+          <Button type="primary" title="Title" disabled />
         </div>
-        <div className="col-4 bg-white">
-          <TextInput
-            label="Label"
-            description="Description"
-            placeholder="Placeholder"
-          />
+        <div className="col-4 p-5 bg-white">
+          <Button type="dark" title="Title" />
+          <Button type="dark" title="Title" disabled />
         </div>
-        <div className="col-4 bg-white">
-          <TextInput
-            label="Label"
-            description="Description"
-            value="Value"
-            withSuccess
-          />
+        <div className="col-4 p-5 bg-dark">
+          <Button type="light" title="Title" />
+          <Button type="light" title="Title" disabled />
         </div>
-        <div className="col-4 bg-white">
-          <TextInput
-            label="Label"
-            error="Here's and error"
-          />
-        </div>
-        <div className="col-4 bg-white">
-          <TextInput
-            label="Label"
-            description="Description"
-            disabled
-          />
+        <div className="col-4 p-5 bg-white">
+          <Button type="link" title="Title" />
+          <Button type="link" title="Title" disabled />
         </div>
       </div>
     </div>
