@@ -22,7 +22,6 @@ const Button = ({
     size !== '' ? `btn-${size}` : '',
     `btn-${btnType}`,
     type !== 'link' ? 'text-uppercase' : '',
-    'font-weight-bold',
     className
   )
 

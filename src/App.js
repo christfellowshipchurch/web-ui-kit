@@ -9,21 +9,58 @@ const App = () => {
   return (
     <div className='container mt-5'>
       <div className="row">
-        <div className="col-4 p-5 bg-white">
-          <Button type="primary" title="Title" onClick={() => console.log('Hello there')} />
-          <Button type="primary" title="Title" disabled />
+        <div className="col-6 p-5 bg-white">
+          <Button type="primary" title="Default" />
         </div>
-        <div className="col-4 p-5 bg-white">
-          <Button type="dark" title="Title" />
-          <Button type="dark" title="Title" disabled />
+        <div className="col-6 p-5 bg-white">
+          <Button type="primary" title="Default" disabled />
         </div>
-        <div className="col-4 p-5 bg-dark">
-          <Button type="light" title="Title" />
-          <Button type="light" title="Title" disabled />
+      </div>
+      <div className="row">
+        <div className="col-6 p-5 bg-white">
+          <Button type="primary" title="Default" size="sm" />
         </div>
-        <div className="col-4 p-5 bg-white">
-          <Button type="link" title="Title" />
-          <Button type="link" title="Title" disabled />
+        <div className="col-6 p-5 bg-white">
+          <Button type="primary" title="Default" size="sm" disabled />
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-6 p-5 bg-white">
+          <Button type="dark" title="Default" />
+        </div>
+        <div className="col-6 p-5 bg-white">
+          <Button type="dark" title="Default" disabled />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-6 p-5 bg-white">
+          <Button type="dark" title="Default" size="sm" />
+        </div>
+        <div className="col-6 p-5 bg-white">
+          <Button type="dark" title="Default" size="sm" disabled />
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-6 p-5 bg-dark">
+          <Button type="light" title="Default" />
+        </div>
+        <div className="col-6 p-5 bg-dark">
+          <Button type="light" title="Default" disabled />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-6 p-5 bg-dark">
+          <Button type="light" title="Default" size="sm" />
+        </div>
+        <div className="col-6 p-5 bg-dark">
+          <Button type="light" title="Default" size="sm" disabled />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-6 p-5 bg-white">
+          <Media videoUrl={videoUrl} rounded />
         </div>
       </div>
     </div>
