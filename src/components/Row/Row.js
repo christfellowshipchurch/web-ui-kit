@@ -14,10 +14,10 @@ const Row = ({ children }) => {
             <div className={classes.row}>
                 {children.map((n, i) => {
                     const classes = classnames(
-                        'd-flex',
-                        'align-items-center',
-                        'justify-content-center',
-                        'p-0',
+                        // 'd-flex',
+                        // 'align-items-center',
+                        // 'justify-content-center',
+                        // 'p-0',
                         'col-12',
                         i === children.length - 1
                             ? 'col-md'
