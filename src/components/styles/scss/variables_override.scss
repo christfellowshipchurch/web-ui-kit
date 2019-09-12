@@ -8,6 +8,7 @@ $gray-600: #696969 !default;
 $gray-700: #525252 !default;
 $gray-800: #353535 !default;
 $gray-900: #1a1a1a !default;
+$black: #000 !default;
 
 $cyan: #00aeef !default;
 $light: $gray-100 !default;
@@ -72,7 +73,7 @@ $btn-border-radius: 50rem;
 $btn-border-radius-lg: 50rem;
 $btn-border-radius-sm: 50rem;
 
-$btn-box-shadow: 0 10px 9px -4px rgba($gray-200, 0.45);
+$btn-box-shadow: 0 15px 12px -4px rgba($black, 0.07);
 
 $btn-disabled-opacity: .5 !default;
 
