@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: dark) {
+    body { 
+        background: $black !important; 
+        color: $white !important;  
+    }
+
+    // Invert grayscale background color styles
+    .bg-white { background: $black !important; }
+    .bg-light { background: $dark !important; }
+
+    .bg-white, .bg-light {
+        &.text-dark, .text-dark {
+            color: $light !important;
+        }
+
+        &.text-black, .text-black {
+            color: $white !important;
+        }
+
+        .btn[class*="dark"] {
+            color: $light !important;
+            border-color: $light !important;
+        }
+    }
+}
