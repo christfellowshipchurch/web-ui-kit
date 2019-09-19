@@ -13,8 +13,7 @@ const InputIcon = ({ icon, focused, color }) => (
         )}
         style={{
             fontSize: 24,
-            width: '15%',
-            minWidth: 24
+            minWidth: 30
         }}
     >
         <FontAwesomeIcon

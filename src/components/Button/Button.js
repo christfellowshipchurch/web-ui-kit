@@ -50,7 +50,7 @@ const Button = ({
             style={{
               width: '1rem',
               height: '1rem',
-              borderWidth: '0.15em'
+              borderWidth: 2
             }}
           >
             <span className="sr-only">Loading...</span>
