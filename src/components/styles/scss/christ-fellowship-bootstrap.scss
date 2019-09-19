@@ -122,14 +122,29 @@ $input-label-transitions: top $input-label-transition-speed, font-size $input-la
     @include input-label-transition;
 }
 
-input[type=text],
-input[type=text]:focus {
+input {
+    background: transparent;
     border-width: 0;
     outline: none;
+
+    &:focus {
+        border-width: 0;
+        outline: none;
+    }
+
+    &:placeholder {
+        color: $dark;
+    }
 }
 
-input[type=text]:placeholder {
-    color: $dark;
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background: transparent;
+    border-width: 0;
+    outline: none;
 }
 
 textarea {

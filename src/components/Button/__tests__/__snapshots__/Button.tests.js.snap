@@ -2,7 +2,7 @@
 
 exports[`Button renders a Button with a size override 1`] = `
 <button
-  className="btn btn-lg btn-primary text-uppercase font-weight-bold"
+  className="btn btn-lg btn-primary text-uppercase"
   onClick={[Function]}
 >
   Button Title
@@ -11,7 +11,7 @@ exports[`Button renders a Button with a size override 1`] = `
 
 exports[`Button renders a Dark Button without crashing 1`] = `
 <button
-  className="btn btn-outline-dark text-uppercase font-weight-bold"
+  className="btn btn-outline-dark text-uppercase"
   onClick={[Function]}
 >
   Button Title
@@ -20,7 +20,7 @@ exports[`Button renders a Dark Button without crashing 1`] = `
 
 exports[`Button renders a Default Button with deprecated properties 1`] = `
 <button
-  className="btn btn-primary text-uppercase font-weight-bold"
+  className="btn btn-primary text-uppercase"
   onClick={[Function]}
 >
   Button Title
@@ -29,7 +29,7 @@ exports[`Button renders a Default Button with deprecated properties 1`] = `
 
 exports[`Button renders a Default Button without crashing 1`] = `
 <button
-  className="btn btn-primary text-uppercase font-weight-bold"
+  className="btn btn-primary text-uppercase"
   onClick={[Function]}
 >
   Button Title
@@ -38,7 +38,7 @@ exports[`Button renders a Default Button without crashing 1`] = `
 
 exports[`Button renders a Light Button without crashing 1`] = `
 <button
-  className="btn btn-outline-light text-uppercase font-weight-bold"
+  className="btn btn-outline-light text-uppercase"
   onClick={[Function]}
 >
   Button Title
@@ -47,7 +47,7 @@ exports[`Button renders a Light Button without crashing 1`] = `
 
 exports[`Button renders a Link Button without crashing 1`] = `
 <button
-  className="btn btn-link font-weight-bold"
+  className="btn btn-link"
   onClick={[Function]}
 >
   Button Title
