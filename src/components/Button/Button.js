@@ -4,11 +4,20 @@ import classnames from 'classnames'
 import renamePropsWithWarning from 'react-deprecate'
 import { get } from 'lodash'
 
+import Loader from '../Loader'
+
+const LOADER_COLORS = {
+  primary: 'white',
+  dark: 'dark',
+  light: 'light',
+}
+
 const Button = ({
   size,
   type,
   title,
   className,
+  loading,
   ...buttonProps
 }) => {
   const btnType = get({
@@ -28,8 +37,26 @@ const Button = ({
   return (
     <button
       className={classes}
-      {...buttonProps} >
-      {title}
+      {...buttonProps}
+    >
+      {loading
+        ? (
+          <div
+            className={classnames(
+              "spinner-border",
+              `text-${get(LOADER_COLORS, type, 'primary')}`
+            )}
+            role="status"
+            style={{
+              width: '1rem',
+              height: '1rem',
+              borderWidth: '0.15em'
+            }}
+          >
+            <span className="sr-only">Loading...</span>
+          </div>
+        )
+        : title}
     </button>
   )
 }
@@ -38,7 +65,8 @@ Button.defaultProps = {
   size: '',
   type: 'primary',
   title: 'default',
-  className: ''
+  className: '',
+  loading: false
 }
 
 Button.propTypes = {
@@ -46,6 +74,7 @@ Button.propTypes = {
   type: PropTypes.string,
   title: PropTypes.string,
   className: PropTypes.string,
+  loading: PropTypes.bool
 }
 
 

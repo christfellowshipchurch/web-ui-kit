@@ -8,10 +8,10 @@ exports[`BlockContainer renders Block in default layout without media 1`] = `
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-12 order-first"
+      className="col-12 col-md-12 order-first px-3"
     />
     <div
-      className="col-12 col-md text-center px-5"
+      className="col-12 col-md text-center px-3"
     >
       <h2>
         Title
@@ -32,7 +32,7 @@ exports[`BlockContainer renders a content Block with the inverted layout 1`] = `
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-12 order-last"
+      className="col-12 col-md-12 order-last px-3"
     >
       <div>
         <div
@@ -68,7 +68,7 @@ exports[`BlockContainer renders a content Block with the inverted layout 1`] = `
       </div>
     </div>
     <div
-      className="col-12 col-md text-center px-5"
+      className="col-12 col-md text-center px-3"
     >
       <h1>
         Title
@@ -92,7 +92,7 @@ exports[`BlockContainer renders a content Block with the left layout 1`] = `
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-6 order-first order-md-last"
+      className="col-12 col-md-6 order-first order-md-last px-3"
     >
       <div>
         <div
@@ -128,7 +128,7 @@ exports[`BlockContainer renders a content Block with the left layout 1`] = `
       </div>
     </div>
     <div
-      className="col-12 col-md text-left px-5"
+      className="col-12 col-md text-left px-3"
     >
       <h1>
         Title
@@ -152,7 +152,7 @@ exports[`BlockContainer renders a content Block with the right layout 1`] = `
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-6 order-first"
+      className="col-12 col-md-6 order-first px-3"
     >
       <div>
         <div
@@ -188,7 +188,7 @@ exports[`BlockContainer renders a content Block with the right layout 1`] = `
       </div>
     </div>
     <div
-      className="col-12 col-md text-left px-5"
+      className="col-12 col-md text-left px-3"
     >
       <h1>
         Title
@@ -212,7 +212,7 @@ exports[`BlockContainer renders a larger title and subtitle 1`] = `
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-12 order-first"
+      className="col-12 col-md-12 order-first px-3"
     >
       <div>
         <div
@@ -248,7 +248,7 @@ exports[`BlockContainer renders a larger title and subtitle 1`] = `
       </div>
     </div>
     <div
-      className="col-12 col-md text-center px-5"
+      className="col-12 col-md text-center px-3"
     >
       <h1>
         Title
@@ -272,7 +272,7 @@ exports[`BlockContainer renders a subtitle in the Block in the default size 1`] 
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-12 order-first"
+      className="col-12 col-md-12 order-first px-3"
     >
       <div>
         <div
@@ -308,7 +308,7 @@ exports[`BlockContainer renders a subtitle in the Block in the default size 1`] 
       </div>
     </div>
     <div
-      className="col-12 col-md text-center px-5"
+      className="col-12 col-md text-center px-3"
     >
       <h2>
         Title
@@ -332,7 +332,7 @@ exports[`BlockContainer renders a video with background image and Block in defau
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-12 order-first"
+      className="col-12 col-md-12 order-first px-3"
     >
       <div>
         <div
@@ -368,7 +368,7 @@ exports[`BlockContainer renders a video with background image and Block in defau
       </div>
     </div>
     <div
-      className="col-12 col-md text-center px-5"
+      className="col-12 col-md text-center px-3"
     >
       <h2>
         Title
@@ -389,7 +389,7 @@ exports[`BlockContainer renders an image and Block in default layout 1`] = `
     className="row align-items-center"
   >
     <div
-      className="col-12 col-md-12 order-first"
+      className="col-12 col-md-12 order-first px-3"
     >
       <div>
         <div
@@ -413,7 +413,7 @@ exports[`BlockContainer renders an image and Block in default layout 1`] = `
       </div>
     </div>
     <div
-      className="col-12 col-md text-center px-5"
+      className="col-12 col-md text-center px-3"
     >
       <h2>
         Title

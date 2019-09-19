@@ -1,10 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from "@fortawesome/pro-light-svg-icons"
 
 const InputIcon = ({ icon, focused, color }) => (
-    <div style={{ fontSize: 24 }} className="d-flex align-items-end">
+    <div
+        className={classnames(
+            "d-flex",
+            "align-items-end",
+            "justify-content-center"
+        )}
+        style={{
+            fontSize: 24,
+            width: '15%',
+            minWidth: 24
+        }}
+    >
         <FontAwesomeIcon
             icon={icon}
             size={'1x'}
