@@ -10,8 +10,7 @@ exports[`TextInput renders a Text Input with a placeholder 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -72,8 +71,7 @@ exports[`TextInput renders a Text Input with a prefix 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -144,8 +142,7 @@ exports[`TextInput renders a Text Input with a suffix 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -216,8 +213,7 @@ exports[`TextInput renders a Text Input with an error 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -263,8 +259,7 @@ exports[`TextInput renders a Text Input with an error 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -306,8 +301,7 @@ exports[`TextInput renders a Text Input with using success 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -353,8 +347,7 @@ exports[`TextInput renders a Text Input with using success 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -396,8 +389,7 @@ exports[`TextInput renders a Text Input without crashing 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -457,8 +449,7 @@ exports[`TextInput renders a disabled Text Input 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
@@ -505,8 +496,7 @@ exports[`TextInput renders a disabled Text Input 1`] = `
       style={
         Object {
           "fontSize": 24,
-          "minWidth": 24,
-          "width": "15%",
+          "minWidth": 30,
         }
       }
     >
