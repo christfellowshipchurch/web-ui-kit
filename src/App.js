@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './components/styles/css/christ-fellowship-bootstrap.css'
 import { faEnvelope } from '@fortawesome/fontawesome-pro-light'
-import { Block, Row, TextInput, Dropdown, TextArea, Carousel, Accordion, Button, Media } from './components'
+import {
+  Block,
+  Row,
+  TextInput,
+  Dropdown,
+  TextArea,
+  Carousel,
+  Accordion,
+  Button,
+  Media,
+  Checkbox
+} from './components'
 
 const videoUrl = "https://gochristfellowship.com/wp-content/uploads/2018/08/August_2018_Home_Video.mp4"
 const title = 'Lorem ipsum'
@@ -16,9 +27,43 @@ const options2 = [
 ]
 
 const App = () => {
+  const [checked, setChecked] = useState(false)
+
   return (
     <React.Fragment>
       <div className="container my-5 py-5 bg-white">
+        <div className="row">
+          <div className="col-6 p-3">
+            <Checkbox
+              label={subtitle + subtitle + subtitle}
+              checked={checked}
+              onClick={() => setChecked(!checked)}
+            />
+          </div>
+
+          <div className="col-6 p-3">
+            <Checkbox
+              label="Checkbox label"
+              checked
+            />
+          </div>
+
+          <div className="col-6 p-3">
+            <Checkbox
+              label="Checkbox label"
+              type="primary"
+            />
+          </div>
+
+          <div className="col-6 p-3">
+            <Checkbox
+              label="Checkbox label"
+              checked
+              type="primary"
+            />
+          </div>
+        </div>
+
         <div className="row">
           <div className="col-6 p-3">
             <TextInput placeholder="Text" />

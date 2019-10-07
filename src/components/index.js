@@ -10,6 +10,4 @@ import Carousel from './Carousel'
 
 export { Loader, Media, Block, Row, Button, Accordion, TextArea, Carousel }
 
-export {
-    TextInput, Dropdown
-} from './inputs'
+export * from './inputs'
