@@ -89,14 +89,14 @@ Dropdown.propTypes = {
   // Options allow an array of:
   //  strings: where the value and label are the same
   //  objects: { value, label } to distinguish the label from the value
-  options: PropTypes.arrayOf(
-    PropTypes.oneOfType(
-      PropTypes.shape({
-        value: PropTypes.string,
-        label: PropTypes.string
-      }),
-      PropTypes.string
-    )),
+  options: PropTypes.oneOfType([
+    PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            value: PropTypes.string,
+        })
+    ),
+]),
 }
 
 export default Dropdown
